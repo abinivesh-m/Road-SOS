@@ -1,0 +1,325 @@
+Country,State,City,Category,Name,Phone,Address,Latitude,Longitude
+India,Tamil Nadu,Chennai,Hospital,Apollo Hospital,+91 80 6904 9756,"21 Greams Lane, Thousand Lights, Chennai, Tamil Nadu 600006",13.0797,80.1973
+India,Tamil Nadu,Chennai,Hospital,Fortis Hospital,+91 99625 99933,"52 1st Main Road, Gandhi Nagar, Adyar, Chennai, Tamil Nadu 600020",13.05,80.212
+India,Tamil Nadu,Chennai,Hospital,IITM Institute,044-2257 8330,"Near Kendra Vidyalaya, IITM Campus, School 1st Cross St, Indian Institute Of Technology, Chennai, Tamil Nadu 600036",12.992,80.2338
+India,Tamil Nadu,Chennai,Hospital,Gem Hospital,+91 44 6166 6666,"MDR452, Gandhi Nagar, Thiruvengadam Nagar, Perungudi, Chennai, Tamil Nadu 600096",12.9684,80.2451
+India,Tamil Nadu,Chennai,Hospital,MIOT International,+91 44 4200 2288,"4/112 Mount Poonamallee Road, Manapakkam, Chennai, Tamil Nadu 600089",13.0215,80.185
+India,Tamil Nadu,Chennai,Police,J7- Velachery,+91 44 2345 2605,"1, Velachery Main Rd, Velachery, Chennai, Tamil Nadu 600042",12.9787,80.2206
+India,Tamil Nadu,Chennai,Police,J13,+91 94981 00168,"81/12, Nehru St, Kanagam, Tharamani, Chennai, Tamil Nadu 600113",12.9858,80.2418
+India,Tamil Nadu,Chennai,Police,Koyambedu,+91 44 2345 2739,"Koyembedu Market E Road, Kaliamman Koil St, Koyambedu, Chennai, Tamil Nadu 600107",13.071,80.194
+India,Tamil Nadu,Chennai,Police,Anna Nagar,+91 44 2345 2719,"6th Ave, Anna Nagar, Annanagar East, Chennai, Tamil Nadu 600040",13.085,80.21
+India,Tamil Nadu,Chennai,Police,Velachery,+91 44 2345 2605,"1, Velachery Main Rd, Velachery, Chennai, Tamil Nadu 600042",12.98,80.22
+India,Tamil Nadu,Chennai,Ambulance,108 Emergency,108,"EMRI Station, Park Town, Chennai, Tamil Nadu 600003",13.0827,80.2707
+India,Tamil Nadu,Chennai,Ambulance,Chennai Ambulance,102,"EMRI Base, Tambaram, Chennai, Tamil Nadu 600045",13.07,80.25
+India,Tamil Nadu,Chennai,Ambulance,Bethel Ambulance,+91 91763 08428,"28, 1st Ave, Indira Nagar, Adyar, Chennai, Tamil Nadu 600020",13.0063,80.2562
+India,Tamil Nadu,Chennai,Ambulance,Chennai City Ambulance,+91 96268 85969,"9/1, 10th Ln, Indira Nagar, Adyar, Chennai, Tamil Nadu 600020",13.0055,80.255
+India,Tamil Nadu,Chennai,Ambulance,City Emergency,+91 44 4545 4545,"42 Sterling Road, Nungambakkam, Chennai, Tamil Nadu 600034",13.06,80.23
+India,Tamil Nadu,Chennai,Rescue Service,Chennai Rescue,+91 44 2641 6422,"Tamil Nadu Fire and Rescue Services HQ, Chennai, Tamil Nadu 600002",13.05,80.21
+India,Tamil Nadu,Chennai,Rescue Service,Tamil Nadu Rescue,+91 44 2641 6422,"Tamil Nadu Fire and Rescue Services, Rajaji Salai, Chennai, Tamil Nadu 600001",13.04,80.2
+India,Tamil Nadu,Chennai,Rescue Service,Blue Cross,+91 44 4627 4999,"72, Velachery Main Rd, Guindy, Chennai, Tamil Nadu 600032",13.00024,80.21614
+India,Tamil Nadu,Chennai,Rescue Service,Madras Animal Rescue,+91 99400 59810,"East Coast Rd, PRS Nagar, Palavakkam, Chennai, Tamil Nadu 600041",12.9597,80.2565
+India,Tamil Nadu,Chennai,Rescue Service,Urban Vehicle Rescue,+91 97110 77372,"9.88E+09, Chennai, Tamil Nadu",13.06,80.22
+India,Tamil Nadu,Chennai,Tow Service,TVS Auto Assist,+91 1800 258 9191,"Kochar Bliss, A8 & A9, Thiru Vi Ka Industrial Estate, SIDCO Industrial Estate, Guindy, Chennai, Tamil Nadu 600032",13.0102,80.2129
+India,Tamil Nadu,Chennai,Tow Service,Elephant Towing,+91 93426 28202,"12/29 Boo Begum, 3rd St, Mount Road, Express Estate, Royapettah, Chennai, Tamil Nadu 600002",13.0645,80.2711
+India,Tamil Nadu,Chennai,Tow Service,Fast Recovery Towing Service,+91 98414 48313,"Chennai, Tamil Nadu",,
+India,Tamil Nadu,Chennai,Tow Service,Elite Road,+91 72990 50247,"No:22, Labour Colony 4th St, 3rd Phase, Thiru Vi Ka Industrial Estate, Guindy, Chennai, Tamil Nadu 600032",13.0114,80.2138
+India,Tamil Nadu,Chennai,Tow Service,Chennai Towing,+91 98408 36733,"56, 6th St, Phase-1, Porur Gardens, Vanagaram, Chennai, Tamil Nadu 600116",13.0356,80.1589
+India,Tamil Nadu,Chennai,Puncture Shop,Adyar Puncture,+91 90697 78888,"150, Muthulakshmi Salai, Lattice Brg Rd, Venkata Rathinam Nagar, Adyar, Chennai, Tamil Nadu 600020",13.0047,80.2301
+India,Tamil Nadu,Chennai,Puncture Shop,NAGA Tyres,+91 90870 54496,"Venkatasapuram, Kottivakkam, Chennai, Tamil Nadu 600041",12.9194,80.2579
+India,Tamil Nadu,Chennai,Puncture Shop,Ganesh Puncture,+91 88256 64033,"46, MGR Rd, Bharathi Nagar, Perungudi, Chennai, Tamil Nadu 600042",12.968,80.2458
+India,Tamil Nadu,Chennai,Puncture Shop,Alex Puncture,+91 98948 48169,"1, Jawaharlal Nehru Salai, Bharathi Nagar, Tharamani, Chennai, Tamil Nadu 600113",12.9858,80.2452
+India,Tamil Nadu,Chennai,Puncture Shop,Sri Ganapathi Puncture,+91 94448 82367,"6 3, Prithvi Pakkam, Ambattur, Chennai, Tamil Nadu 600053",13.1176,80.1548
+India,Tamil Nadu,Chennai,Fire Station,Virugambakkam Fire Station,+91 44 2476 9101,"25PF+262, Kambar St, Senthil Nagar, Ramapuram, Chennai, Tamil Nadu 600089",13.0348,80.1985
+India,Tamil Nadu,Chennai,Fire Station,Teynampet Fire Station,+91 94450 86048,"138, Anna Salai, Chokkalingam Nagar, Teynampet, Chennai, Tamil Nadu 600006",13.0419,80.2428
+India,Tamil Nadu,Chennai,Fire Station,Koyambedu Fire Station,+91 94450 86067,"Koyambedu Market A Rd, Wholesale Market Complex, Koyambedu, Chennai, Tamil Nadu 600107",13.0695,80.1945
+India,Tamil Nadu,Chennai,Fire Station,Guindy Fire Station,101,"Alandur Road, SIDCO Industrial Estate, Guindy, Chennai, Tamil Nadu 600032",13.008,80.2205
+India,Tamil Nadu,Chennai,Fire Station,Fire and Rescue,+91 44 2235 4835,"264F+MQ8, Little Mount, Kotturpuram, Chennai, Tamil Nadu 600022",13.005,80.241
+India,Tamil Nadu,Coimbatore,Hospital,G Kuppuswamy Naidu Memorial Hospital,+91 422 430 5212,"Post Box 6327 Nethaji Road, Coimbatore 641001",11.0142,76.9755
+India,Tamil Nadu,Coimbatore,Hospital,PSG Hospitals,+91 422 434 5353,"Peelamedu, Coimbatore 641004",11.0224,77.0276
+India,Tamil Nadu,Coimbatore,Hospital,Kovai Medical Center,+91 422 432 3800,"99 Avanashi Road, Peelamedu, Coimbatore 641014",11.0236,77.0273
+India,Tamil Nadu,Coimbatore,Hospital,Sri Ramakrishna Hospital,+91 422 450 0000,"395 Sarojini Naicker Road, Coimbatore 641044",11.0258,76.9467
+India,Tamil Nadu,Coimbatore,Hospital,Apollo Hospitals Coimbatore,+91 422 420 0444,"320 Avinashi Road, Peelamedu, Coimbatore 641014",11.0218,77.0235
+India,Tamil Nadu,Coimbatore,Ambulance,108 EMRI Ambulance Coimbatore,108,"EMRI Base Gandhipuram, Coimbatore 641012",11.0187,76.9703
+India,Tamil Nadu,Coimbatore,Ambulance,Kovai EMRI Ambulance,4224596000,"99 Avanashi Road, Coimbatore 641014",11.0236,77.0273
+India,Tamil Nadu,Coimbatore,Ambulance,GVK EMRI Coimbatore South,108,"Saravanampatti, Coimbatore 641035",11.0721,77.0683
+India,Tamil Nadu,Coimbatore,Ambulance,Rescue Aid Ambulance Coimbatore,9843456789,"RS Puram, Coimbatore 641002",11.0092,76.9528
+India,Tamil Nadu,Coimbatore,Police,Gandhipuram Police Station,4222222100,"Gandhipuram, Coimbatore 641012",11.0189,76.9712
+India,Tamil Nadu,Coimbatore,Police,RS Puram Police Station,+91 94981 01161,"RS Puram, Coimbatore 641002",11.0097,76.9534
+India,Tamil Nadu,Coimbatore,Police,Peelamedu Police Station,4222224100,"Avanashi Road, Peelamedu, Coimbatore 641004",11.0212,77.0257
+India,Tamil Nadu,Coimbatore,Police,Singanallur Police Station,+91 422 258 0354,"Trichy Road, Singanallur, Coimbatore 641005",10.9967,77.0132
+India,Tamil Nadu,Coimbatore,Fire Station,Coimbatore Fire & Rescue HQ,4222301101,"Bharathi Park Road, Coimbatore 641043",11.0162,76.9614
+India,Tamil Nadu,Coimbatore,Fire Station,Coimbatore Fire Station Peelamedu,4222302101,"Avanashi Road, Peelamedu, Coimbatore 641004",11.0227,77.0265
+India,Tamil Nadu,Coimbatore,Fire Station,Coimbatore Fire Station Singanallur,4222303101,"Trichy Road, Singanallur, Coimbatore 641005",10.9978,77.0141
+India,Tamil Nadu,Coimbatore,Fire Station,Coimbatore Fire Station Saravanampatti,4222304101,"Saravanampatti Main Road, Coimbatore 641035",11.0712,77.0676
+India,Tamil Nadu,Coimbatore,Rescue Service,TNFRS Urban Rescue Coimbatore,4222301100,"Bharathi Park Road, Coimbatore 641043",11.0161,76.9612
+India,Tamil Nadu,Coimbatore,Rescue Service,District Disaster Management Coimbatore,4222302300,"Collector Office, Race Course Road, Coimbatore 641018",11.0146,76.9542
+India,Tamil Nadu,Coimbatore,Rescue Service,Coimbatore Mountain Rescue Team,9843567890,"Siruvani Road, Maruthamalai, Coimbatore 641402",11.0702,76.8871
+India,Tamil Nadu,Coimbatore,Rescue Service,NDRF Response Unit Coimbatore,4222303400,"Near Airport, Peelamedu, Coimbatore 641014",11.0285,77.0442
+India,Tamil Nadu,Coimbatore,Tow Service,Coimbatore Highway Towing,9842100200,"Avanashi Road, Coimbatore 641014",11.023,77.0198
+India,Tamil Nadu,Coimbatore,Tow Service,Trichy Road Breakdown Service,9843200300,"Trichy Road, Singanallur, Coimbatore 641005",10.9982,77.0127
+India,Tamil Nadu,Coimbatore,Tow Service,Sakthi Vehicle Recovery,9876543210,"Mettupalayam Road, Coimbatore 641301",11.0542,76.9387
+India,Tamil Nadu,Coimbatore,Tow Service,24Hr Towing Coimbatore,9600900800,"Bharathi Nagar, RS Puram, Coimbatore 641002",11.0101,76.9556
+India,Tamil Nadu,Coimbatore,Puncture Shop,Vinayaga Tyre Works Gandhipuram,9842334455,"Nehru Street, Gandhipuram, Coimbatore 641012",11.0194,76.9728
+India,Tamil Nadu,Coimbatore,Puncture Shop,Kumar Puncture Service RS Puram,9843445566,"Cross Cut Road, RS Puram, Coimbatore 641002",11.0106,76.9512
+India,Tamil Nadu,Coimbatore,Puncture Shop,Lakshmi Tyre Repairs Peelamedu,9791556677,"Avanashi Road, Peelamedu, Coimbatore 641004",11.0208,77.0241
+India,Tamil Nadu,Coimbatore,Puncture Shop,Speed Tyre Works Trichy Road,9600667788,"Trichy Road, Coimbatore 641005",10.9996,77.0109
+India,Tamil Nadu,Coimbatore,Vehicle Showroom,Sri Sakthi Hyundai Coimbatore,4224001000,"100 Feet Road, Peelamedu, Coimbatore 641004",11.0216,77.0251
+India,Tamil Nadu,Coimbatore,Vehicle Showroom,Lakshmi Toyota Coimbatore,4224002000,"Avinashi Road, Coimbatore 641014",11.0228,77.0204
+India,Tamil Nadu,Coimbatore,Vehicle Showroom,Pon Mahindra Coimbatore,4224003000,"Cross Cut Road, RS Puram, Coimbatore 641002",11.0113,76.9537
+India,Tamil Nadu,Coimbatore,Vehicle Showroom,Pinnacle Honda Coimbatore,4224004000,"Trichy Road, Singanallur, Coimbatore 641005",10.9989,77.0115
+India,Karnataka,Bangalore,Hospital,Manipal Hospital HAL Airport Road,+91 1800 102 4647,"98 HAL Airport Road, Kodihalli, Bangalore 560008",12.9634,77.6327
+India,Karnataka,Bangalore,Hospital,Narayana Health City Bommasandra,+91 80 6215 4298,"258/A Bommasandra Industrial Area, Bangalore 560099",12.8229,77.6745
+India,Karnataka,Bangalore,Hospital,St John's Medical College Hospital,+91 80 2206 5000,"Sarjapur Road, Koramangala, Bangalore 560034",12.9347,77.6223
+India,Karnataka,Bangalore,Hospital,Apollo Hospital Bannerghatta Road,+91 80 6904 9765,"154/11 Bannerghatta Road, Bangalore 560076",12.8924,77.5958
+India,Karnataka,Bangalore,Hospital,Fortis Hospital Cunningham Road,+91 96868 60310,"14 Cunningham Road, Bangalore 560052",12.9851,77.5974
+India,Karnataka,Bangalore,Ambulance,108 EMRI Ambulance Bangalore Central,108,"EMRI HQ, Miller Road, Bangalore 560052",12.9837,77.5966
+India,Karnataka,Bangalore,Ambulance,Manipal Ambulance Services Bangalore,8025023456,"98 HAL Airport Road, Bangalore 560008",12.9634,77.6327
+India,Karnataka,Bangalore,Ambulance,Narayana Ambulance Hoskote Road,8027833444,"Whitefield, Bangalore 560066",12.9668,77.7492
+India,Karnataka,Bangalore,Ambulance,GVK EMRI Bangalore South,108,"Electronic City Phase 1, Bangalore 560100",12.848,77.6656
+India,Karnataka,Bangalore,Police,Cubbon Park Police Station,8022943100,"Cubbon Park, Bangalore 560001",12.9796,77.5937
+India,Karnataka,Bangalore,Police,Koramangala Police Station,8025537100,"80 Feet Road, Koramangala, Bangalore 560034",12.9382,77.6278
+India,Karnataka,Bangalore,Police,Whitefield Police Station,+91 80 2294 3472,"EPIP Zone, Whitefield, Bangalore 560066",12.9684,77.7501
+India,Karnataka,Bangalore,Police,Electronic City Police Station,8028520100,"Electronic City Phase 2, Bangalore 560100",12.8386,77.6612
+India,Karnataka,Bangalore,Police,Indiranagar Police Station,+91 80 2294 2541,"CMH Road, Indiranagar, Bangalore 560038",12.9778,77.6406
+India,Karnataka,Bangalore,Fire Station,Karnataka Fire & Emergency Services HQ,8022943200,"Museum Road, Bangalore 560001",12.9721,77.6063
+India,Karnataka,Bangalore,Fire Station,Bangalore Fire Station Koramangala,8025537200,"80 Feet Road, Koramangala, Bangalore 560034",12.9356,77.6242
+India,Karnataka,Bangalore,Fire Station,Bangalore Fire Station Whitefield,8028452200,"Whitefield Road, Bangalore 560066",12.9697,77.7486
+India,Karnataka,Bangalore,Fire Station,Bangalore Fire Station Electronic City,8028520200,"Electronic City Phase 1, Bangalore 560100",12.8453,77.6662
+India,Karnataka,Bangalore,Rescue Service,NDRF 10th Battalion Bangalore,8022220000,"Yelahanka, Bangalore 560064",13.1002,77.5963
+India,Karnataka,Bangalore,Rescue Service,KSNDMC State Emergency Response,8022245600,"Seshadri Road, Bangalore 560001",12.9762,77.5734
+India,Karnataka,Bangalore,Rescue Service,Bangalore City Disaster Management,8022660000,"BBMP HQ, Hudson Circle, Bangalore 560002",12.9775,77.5852
+India,Karnataka,Bangalore,Rescue Service,Indian Red Cross Bangalore,8022860000,"1 Raj Bhavan Road, Bangalore 560001",12.9924,77.5857
+India,Karnataka,Bangalore,Tow Service,Bangalore 24/7 Towing Service,9845001100,"Outer Ring Road, Marathahalli, Bangalore 560037",12.9562,77.6997
+India,Karnataka,Bangalore,Tow Service,NHAI Toll Towing Bangalore,8028001200,"NH 44 Bommasandra, Bangalore 560099",12.8241,77.6753
+India,Karnataka,Bangalore,Tow Service,Whitefield Vehicle Recovery,9900223344,"Whitefield Main Road, Bangalore 560066",12.9675,77.7482
+India,Karnataka,Bangalore,Tow Service,Kanakapura Road Breakdown Service,9739334455,"Kanakapura Road, Bangalore 560062",12.8654,77.5598
+India,Karnataka,Bangalore,Puncture Shop,MG Road Tyre Works,9845556677,"MG Road, Bangalore 560001",12.9752,77.6078
+India,Karnataka,Bangalore,Puncture Shop,Koramangala Quick Tyre,9880667788,"5th Block Koramangala, Bangalore 560034",12.9358,77.6236
+India,Karnataka,Bangalore,Puncture Shop,Whitefield Puncture Centre,9740778899,"Varthur Road, Whitefield, Bangalore 560066",12.9701,77.7458
+India,Karnataka,Bangalore,Puncture Shop,Electronic City Tyre Works,9741889900,"Phase 2 Electronic City, Bangalore 560100",12.8396,77.6634
+India,Karnataka,Bangalore,Vehicle Showroom,Mandovi Motors Volkswagen Bangalore,8041454545,"Queens Road, Bangalore 560001",12.9835,77.6032
+India,Karnataka,Bangalore,Vehicle Showroom,Navnit Hyundai Residency Road,8025575757,"14 Residency Road, Bangalore 560025",12.9726,77.6157
+India,Karnataka,Bangalore,Vehicle Showroom,Cauvery Toyota Ballari Road,8023551234,"Ballari Road, Sadashivanagar, Bangalore 560080",13.0074,77.5812
+India,Karnataka,Bangalore,Vehicle Showroom,Tata Motors Arena Whitefield,8028451234,"EPIP Zone, Whitefield, Bangalore 560066",12.9692,77.7495
+India,Karnataka,Bangalore,Vehicle Showroom,Mahindra First Choice Koramangala,8025531234,"7th Block Koramangala, Bangalore 560034",12.9332,77.6268
+Sri Lanka,Western,Colombo,Hospital,National Hospital of Sri Lanka,+94 112 691 111,"Regent Street, Colombo 10, Sri Lanka",6.9216,79.8621
+Sri Lanka,Western,Colombo,Hospital,Asiri Hospital Colombo,+94 114 665 500,"181 Kirula Road, Colombo 05, Sri Lanka",6.8824,79.8698
+Sri Lanka,Western,Colombo,Hospital,Nawaloka Hospital,+94 115 777 777,"23 Sri Sugathadasa Mawatha, Colombo 02, Sri Lanka",6.9161,79.8514
+Sri Lanka,Western,Colombo,Hospital,Lanka Hospitals Corporation,+94 115 430 000,"578 Elvitigala Mawatha, Colombo 05, Sri Lanka",6.8897,79.8723
+Sri Lanka,Western,Colombo,Ambulance,Suwa Seriya Ambulance Colombo 1990,1990,"Kirula Road, Colombo 05, Sri Lanka",6.8824,79.8701
+Sri Lanka,Western,Colombo,Ambulance,National Hospital Ambulance Unit,112697777,"Regent Street, Colombo 10, Sri Lanka",6.9216,79.8621
+Sri Lanka,Western,Colombo,Ambulance,Asiri Ambulance Service Colombo,115577999,"181 Kirula Road, Colombo 05, Sri Lanka",6.8824,79.8698
+Sri Lanka,Western,Colombo,Ambulance,Red Cross Ambulance Colombo,112695412,"106 Dharmapala Mawatha, Colombo 03, Sri Lanka",6.9092,79.8557
+Sri Lanka,Western,Colombo,Police,Colombo Central Police Station,112329611,"Central Police, Front Street, Colombo 01, Sri Lanka",6.9342,79.8485
+Sri Lanka,Western,Colombo,Police,Colombo Fort Police Station,+94 112 433 744,"Chatham Street, Colombo Fort, Colombo 01, Sri Lanka",6.9357,79.8432
+Sri Lanka,Western,Colombo,Police,Wellawatte Police Station,+94 112 588 212,"Marine Drive, Wellawatte, Colombo 06, Sri Lanka",6.8628,79.8627
+Sri Lanka,Western,Colombo,Police,Bambalapitiya Police Station,+94 112 588 680,"Galle Road, Bambalapitiya, Colombo 04, Sri Lanka",6.8812,79.8574
+Sri Lanka,Western,Colombo,Fire Station,Colombo Municipal Fire Brigade HQ,+94 112 422 222,"Torrington Avenue, Colombo 07, Sri Lanka",6.9006,79.8644
+Sri Lanka,Western,Colombo,Fire Station,Dehiwala Fire Station,112712222,"Galle Road, Dehiwala, Colombo, Sri Lanka",6.8473,79.8689
+Sri Lanka,Western,Colombo,Fire Station,Wellawatte Fire Station,112588222,"Marine Drive, Wellawatte, Colombo 06, Sri Lanka",6.8617,79.8621
+Sri Lanka,Western,Colombo,Fire Station,Pettah Fire Station,112326222,"Manning Market, Pettah, Colombo 11, Sri Lanka",6.9402,79.8511
+Sri Lanka,Western,Colombo,Rescue Service,Sri Lanka Disaster Management Centre,112136222,"BMICH Premises, Bauddaloka Mawatha, Colombo 07, Sri Lanka",6.9044,79.8612
+Sri Lanka,Western,Colombo,Rescue Service,Sri Lanka Navy Search & Rescue,112422000,"Colombo Naval Base, Colombo 01, Sri Lanka",6.9567,79.8321
+Sri Lanka,Western,Colombo,Rescue Service,SLAF Rescue Coordination Centre,112333361,"SLAF Ratmalana, Colombo, Sri Lanka",6.8227,79.8878
+Sri Lanka,Western,Colombo,Rescue Service,Civil Defence Force Colombo,112577577,"Colombo 07, Sri Lanka",6.9012,79.8634
+Sri Lanka,Western,Colombo,Tow Service,Colombo 24Hr Towing Service,777100200,"Baseline Road, Colombo 09, Sri Lanka",6.9123,79.8704
+Sri Lanka,Western,Colombo,Tow Service,Sri Lanka AAA Towing,777200300,"Galle Road, Colombo 03, Sri Lanka",6.9078,79.8574
+Sri Lanka,Western,Colombo,Tow Service,Lakehouse Vehicle Recovery,777300400,"Dam Street, Colombo 12, Sri Lanka",6.9412,79.8487
+Sri Lanka,Western,Colombo,Tow Service,Metro Breakdown Services Colombo,777400500,"Marine Drive, Colombo 15, Sri Lanka",6.9732,79.8651
+Sri Lanka,Western,Colombo,Puncture Shop,Lanka Tyre Works Galle Road,777550660,"Galle Road, Colombo 03, Sri Lanka",6.9056,79.8552
+Sri Lanka,Western,Colombo,Puncture Shop,City Puncture Repairs Baseline,777660770,"Baseline Road, Colombo 09, Sri Lanka",6.9127,79.8697
+Sri Lanka,Western,Colombo,Puncture Shop,Wellawatte Tyre Centre,777770880,"Marine Drive, Wellawatte, Colombo 06, Sri Lanka",6.8634,79.8619
+Sri Lanka,Western,Colombo,Puncture Shop,Fort Tyre Repairs,777880990,"Chatham Street, Colombo 01, Sri Lanka",6.9361,79.8443
+Sri Lanka,Western,Colombo,Vehicle Showroom,DIMO Toyota Showroom Colombo,112313131,"65 Sir Chittampalam A Gardiner Mawatha, Colombo 02",6.9208,79.8467
+Sri Lanka,Western,Colombo,Vehicle Showroom,Stafford Motors Honda Colombo,112302020,"711 Galle Road, Colombo 03, Sri Lanka",6.9064,79.8561
+Sri Lanka,Western,Colombo,Vehicle Showroom,Upali Motors Hyundai Colombo,112694040,"60 D R Wijewardena Mawatha, Colombo 10, Sri Lanka",6.9263,79.8618
+Sri Lanka,Western,Colombo,Vehicle Showroom,Diesel & Motor Engineering Suzuki,112434343,"65 C A Gardner Mawatha, Colombo 02, Sri Lanka",6.9197,79.8461
+Sri Lanka,Central,Kandy,Hospital,Teaching Hospital Kandy,+94 812 222 261,"Anniewatte Road, Kandy 20000, Sri Lanka",7.2954,80.6358
+Sri Lanka,Central,Kandy,Hospital,Asiri Hospital Kandy,812224400,"10 Sangaraja Mawatha, Kandy 20000, Sri Lanka",7.2913,80.6367
+Sri Lanka,Central,Kandy,Hospital,Nalanda Hospital Kandy,812235500,"Dharmaraja Road, Kandy 20000, Sri Lanka",7.2938,80.6392
+Sri Lanka,Central,Kandy,Hospital,Hemas Hospital Kandy,812220000,"Peradeniya Road, Kandy 20000, Sri Lanka",7.2992,80.6243
+Sri Lanka,Central,Kandy,Ambulance,Suwa Seriya Ambulance Kandy,1990,"Anniewatte Road, Kandy 20000, Sri Lanka",7.2954,80.6358
+Sri Lanka,Central,Kandy,Ambulance,Teaching Hospital Ambulance Kandy,812234590,"Anniewatte Road, Kandy 20000, Sri Lanka",7.2954,80.6358
+Sri Lanka,Central,Kandy,Ambulance,Kandy Red Cross Ambulance,812222020,"Dalada Veediya, Kandy 20000, Sri Lanka",7.2937,80.6412
+Sri Lanka,Central,Kandy,Ambulance,Asiri Ambulance Kandy,812224410,"10 Sangaraja Mawatha, Kandy 20000, Sri Lanka",7.2913,80.6367
+Sri Lanka,Central,Kandy,Police,Kandy Police Station,+94 812 222 222,"Court Square, Kandy 20000, Sri Lanka",7.2942,80.6408
+Sri Lanka,Central,Kandy,Police,Peradeniya Police Station,812388222,"Peradeniya Road, Kandy 20000, Sri Lanka",7.2688,80.6012
+Sri Lanka,Central,Kandy,Police,Katugastota Police Station,812500222,"Katugastota Road, Kandy 20000, Sri Lanka",7.3227,80.6318
+Sri Lanka,Central,Kandy,Police,Ampitiya Police Station,812233222,"Ampitiya Road, Kandy 20000, Sri Lanka",7.2793,80.6554
+Sri Lanka,Central,Kandy,Fire Station,Kandy Municipal Fire Brigade,812222333,"Kandy Municipal Council, Kandy 20000, Sri Lanka",7.2928,80.6404
+Sri Lanka,Central,Kandy,Fire Station,Peradeniya Fire Station,812388333,"Peradeniya Road, Peradeniya, Sri Lanka",7.2662,80.5987
+Sri Lanka,Central,Kandy,Fire Station,Katugastota Fire Station,812500333,"Main Street, Katugastota, Kandy, Sri Lanka",7.3216,80.6301
+Sri Lanka,Central,Kandy,Fire Station,Gampola Fire Station,812352333,"Gampola Road, Kandy, Sri Lanka",7.1649,80.5712
+Sri Lanka,Central,Kandy,Rescue Service,Central Province Disaster Management,812232000,"Kandy 20000, Sri Lanka",7.2942,80.6412
+Sri Lanka,Central,Kandy,Rescue Service,Civil Defence Kandy,812234000,"Anniewatte, Kandy 20000, Sri Lanka",7.2958,80.6362
+Sri Lanka,Central,Kandy,Rescue Service,Kandy SAR Mountain Rescue,777123456,"Hanthana Road, Kandy 20000, Sri Lanka",7.2689,80.6201
+Sri Lanka,Central,Kandy,Rescue Service,Sri Lanka Red Cross Kandy,812225000,"Dalada Veediya, Kandy 20000, Sri Lanka",7.2932,80.6417
+Sri Lanka,Central,Kandy,Tow Service,Kandy 24Hr Towing,776100200,"Colombo Road, Kandy 20000, Sri Lanka",7.2921,80.6238
+Sri Lanka,Central,Kandy,Tow Service,Hill Country Vehicle Recovery,776200300,"Peradeniya Road, Kandy 20000, Sri Lanka",7.2774,80.6112
+Sri Lanka,Central,Kandy,Tow Service,Kandy Road Rescue Service,776300400,"Katugastota Road, Kandy 20000, Sri Lanka",7.3062,80.6324
+Sri Lanka,Central,Kandy,Tow Service,Central Breakdown Services,776400500,"Gampola Road, Kandy 20000, Sri Lanka",7.2493,80.6008
+Sri Lanka,Central,Kandy,Puncture Shop,Kandy Tyre Works Colombo Road,776550660,"Colombo Road, Kandy 20000, Sri Lanka",7.2917,80.6251
+Sri Lanka,Central,Kandy,Puncture Shop,Peradeniya Puncture Service,776660770,"Peradeniya Road, Kandy, Sri Lanka",7.2701,80.6034
+Sri Lanka,Central,Kandy,Puncture Shop,Katugastota Tyre Repairs,776770880,"Katugastota Road, Kandy, Sri Lanka",7.3205,80.6297
+Sri Lanka,Central,Kandy,Puncture Shop,City Tyre Centre Kandy,776880990,"Dalada Veediya, Kandy 20000, Sri Lanka",7.2935,80.6401
+Sri Lanka,Central,Kandy,Vehicle Showroom,Associated Motorways Toyota Kandy,812201010,"Peradeniya Road, Kandy 20000, Sri Lanka",7.2856,80.6189
+Sri Lanka,Central,Kandy,Vehicle Showroom,Kandy Hyundai Showroom,812202020,"Colombo Road, Kandy 20000, Sri Lanka",7.2893,80.6217
+Sri Lanka,Central,Kandy,Vehicle Showroom,Kandy Honda City,812203030,"Katugastota Road, Kandy 20000, Sri Lanka",7.3058,80.6311
+Sri Lanka,Central,Kandy,Vehicle Showroom,Prestige Maruti Suzuki Kandy,812204040,"Gampola Road, Kandy 20000, Sri Lanka",7.2581,80.5992
+Bangladesh,Dhaka Division,Dhaka,Hospital,Dhaka Medical College Hospital,+880 2-55165130,"Bakshibazar Road, Dhaka 1000, Bangladesh",23.7284,90.3947
+Bangladesh,Dhaka Division,Dhaka,Hospital,Square Hospital Dhaka,+880 9610-010616,"18/F Bir Uttam Qazi Nuruzzaman Sarak, Dhaka 1205",23.7512,90.3857
+Bangladesh,Dhaka Division,Dhaka,Hospital,United Hospital Dhaka,+880 9666-710666,"Plot 15 Road 71 Gulshan, Dhaka 1212, Bangladesh",23.7916,90.4138
+Bangladesh,Dhaka Division,Dhaka,Hospital,Apollo Hospitals Dhaka,+880 1772-299496,"Plot 81 Block E Bashundhara, Dhaka 1229",23.8138,90.4274
+Bangladesh,Dhaka Division,Dhaka,Hospital,Ibn Sina Hospital Dhanmondi,2258614071,"House 48 Road 9/A Dhanmondi, Dhaka 1209",23.7476,90.3732
+Bangladesh,Dhaka Division,Dhaka,Ambulance,National Emergency Ambulance Dhaka,999,"Segunbagicha, Dhaka 1000, Bangladesh",23.7332,90.4164
+Bangladesh,Dhaka Division,Dhaka,Ambulance,DGHS Ambulance Service Dhaka,16555,"DGHS HQ Mohakhali, Dhaka 1212, Bangladesh",23.7798,90.4052
+Bangladesh,Dhaka Division,Dhaka,Ambulance,Square Hospital Ambulance,2258152100,"18/F Bir Uttam Road, Dhaka 1205, Bangladesh",23.7512,90.3857
+Bangladesh,Dhaka Division,Dhaka,Ambulance,Apollo Ambulance Dhaka,2229610911,"Bashundhara, Dhaka 1229, Bangladesh",23.8138,90.4274
+Bangladesh,Dhaka Division,Dhaka,Police,Dhanmondi Police Station,+880 2-58616086,"Road 27 Dhanmondi, Dhaka 1209, Bangladesh",23.7474,90.3746
+Bangladesh,Dhaka Division,Dhaka,Police,Gulshan Police Station,+880 2-9895826,"Road 50 Gulshan 2, Dhaka 1212, Bangladesh",23.7928,90.4152
+Bangladesh,Dhaka Division,Dhaka,Police,Motijheel Police Station,2223411234,"Motijheel Commercial Area, Dhaka 1000",23.7336,90.4208
+Bangladesh,Dhaka Division,Dhaka,Police,Uttara Police Station,2229191234,"Sector 4 Uttara, Dhaka 1230, Bangladesh",23.8742,90.3978
+Bangladesh,Dhaka Division,Dhaka,Police,Mirpur Police Station,2228012345,"Section 2 Mirpur, Dhaka 1216, Bangladesh",23.8226,90.3574
+Bangladesh,Dhaka Division,Dhaka,Fire Station,Dhaka Fire Service HQ Siddhirganj,2228111000,"Siddhirganj, Narayanganj, Dhaka, Bangladesh",23.6298,90.5077
+Bangladesh,Dhaka Division,Dhaka,Fire Station,Dhaka Fire Station Motijheel,2223412000,"Motijheel, Dhaka 1000, Bangladesh",23.7345,90.4217
+Bangladesh,Dhaka Division,Dhaka,Fire Station,Dhaka Fire Station Mirpur,2228012000,"Mirpur 1, Dhaka 1216, Bangladesh",23.8221,90.3582
+Bangladesh,Dhaka Division,Dhaka,Fire Station,Dhaka Fire Station Uttara,2229192000,"Uttara Sector 6, Dhaka 1230, Bangladesh",23.8794,90.3992
+Bangladesh,Dhaka Division,Dhaka,Rescue Service,Bangladesh Fire Service & Civil Defence,2228111100,"Dhaka, Bangladesh",23.7345,90.4217
+Bangladesh,Dhaka Division,Dhaka,Rescue Service,Rapid Action Battalion Dhaka,2228919191,"RAB HQ, Kurmitola, Dhaka 1206",23.8337,90.3994
+Bangladesh,Dhaka Division,Dhaka,Rescue Service,Dhaka City Disaster Management,2222334400,"City Corporation HQ, Dhaka 1000",23.7289,90.4093
+Bangladesh,Dhaka Division,Dhaka,Rescue Service,Bangladesh Red Crescent Dhaka,2228115000,"684/B Bara Moghbazar, Dhaka 1217",23.7532,90.4087
+Bangladesh,Dhaka Division,Dhaka,Tow Service,Dhaka 24Hr Breakdown Towing,1711100200,"Pragati Sarani, Dhaka 1212, Bangladesh",23.7802,90.4245
+Bangladesh,Dhaka Division,Dhaka,Tow Service,Gulshan Vehicle Recovery,1711200300,"Road 11 Gulshan, Dhaka 1212, Bangladesh",23.7904,90.4126
+Bangladesh,Dhaka Division,Dhaka,Tow Service,Mirpur Road Towing Service,1711300400,"Mirpur Road, Dhaka 1216, Bangladesh",23.8117,90.3634
+Bangladesh,Dhaka Division,Dhaka,Tow Service,Uttara Highway Recovery,1711400500,"Uttara Sector 7, Dhaka 1230, Bangladesh",23.8814,90.4002
+Bangladesh,Dhaka Division,Dhaka,Puncture Shop,Dhanmondi Tyre Centre,1811550660,"Satmasjid Road, Dhanmondi, Dhaka 1209",23.7453,90.3712
+Bangladesh,Dhaka Division,Dhaka,Puncture Shop,Gulshan Puncture Works,1811660770,"Road 23 Gulshan, Dhaka 1212, Bangladesh",23.7887,90.4141
+Bangladesh,Dhaka Division,Dhaka,Puncture Shop,Mirpur Tyre Repairs,1811770880,"Mirpur 10 Circle, Dhaka 1216, Bangladesh",23.8204,90.3612
+Bangladesh,Dhaka Division,Dhaka,Puncture Shop,Uttara Tyre Works,1811880990,"Uttara Sector 3, Dhaka 1230, Bangladesh",23.8701,90.3956
+Bangladesh,Dhaka Division,Dhaka,Vehicle Showroom,Navana Toyota Dhaka,2229341000,"24 Kawran Bazar, Dhaka 1215, Bangladesh",23.7518,90.3936
+Bangladesh,Dhaka Division,Dhaka,Vehicle Showroom,Rangs Hyundai Dhaka,2229352000,"57 Dilkusha, Dhaka 1000, Bangladesh",23.7372,90.4169
+Bangladesh,Dhaka Division,Dhaka,Vehicle Showroom,Honda Bangladesh Gulshan,2228363000,"Road 34 Gulshan 1, Dhaka 1212, Bangladesh",23.7825,90.4084
+Bangladesh,Dhaka Division,Dhaka,Vehicle Showroom,Nitol Tata Motors Dhaka,2229374000,"Nitol Centre Banani, Dhaka 1213, Bangladesh",23.7937,90.4048
+Bangladesh,Chittagong Division,Chittagong,Hospital,Chittagong Medical College Hospital,3122312345,"K B Fazlul Kader Road, Chittagong 4203",22.3602,91.8187
+Bangladesh,Chittagong Division,Chittagong,Hospital,Chevron Clinical Laboratory Chittagong,3122313131,"Nasirabad R/A, Chittagong 4000, Bangladesh",22.3678,91.8034
+Bangladesh,Chittagong Division,Chittagong,Hospital,Park View Hospital Chittagong,3122314444,"Khulshi, Chittagong 4225, Bangladesh",22.3745,91.8021
+Bangladesh,Chittagong Division,Chittagong,Hospital,Chittagong General Hospital,3122315555,"Pahartali, Chittagong 4202, Bangladesh",22.3749,91.7932
+Bangladesh,Chittagong Division,Chittagong,Ambulance,National Ambulance Chittagong,999,"Agrabad, Chittagong 4100, Bangladesh",22.3338,91.8214
+Bangladesh,Chittagong Division,Chittagong,Ambulance,CMCH Ambulance Service,3122312360,"K B Fazlul Kader Road, Chittagong 4203",22.3602,91.8187
+Bangladesh,Chittagong Division,Chittagong,Ambulance,Chevron Ambulance Chittagong,3122313140,"Nasirabad, Chittagong 4000, Bangladesh",22.3678,91.8034
+Bangladesh,Chittagong Division,Chittagong,Ambulance,Port City Ambulance Service,1811991234,"GEC Crossing, Chittagong 4100, Bangladesh",22.3634,91.8267
+Bangladesh,Chittagong Division,Chittagong,Police,Kotwali Police Station,+880 1713-373256,"Anderkilla, Chittagong 4000, Bangladesh",22.3372,91.8367
+Bangladesh,Chittagong Division,Chittagong,Police,Panchlaish Police Station,3122327100,"Panchlaish, Chittagong 4213, Bangladesh",22.3586,91.8143
+Bangladesh,Chittagong Division,Chittagong,Police,Khulshi Police Station,3122328100,"Khulshi, Chittagong 4225, Bangladesh",22.3748,91.8028
+Bangladesh,Chittagong Division,Chittagong,Police,Pahartali Police Station,3122329100,"Pahartali, Chittagong 4202, Bangladesh",22.3753,91.7938
+Bangladesh,Chittagong Division,Chittagong,Fire Station,Chittagong Fire & Civil Defence,3122326200,"Dewanhat, Chittagong 4000, Bangladesh",22.3458,91.8312
+Bangladesh,Chittagong Division,Chittagong,Fire Station,Agrabad Fire Station,3122327200,"Agrabad Commercial Area, Chittagong 4100",22.3321,91.8208
+Bangladesh,Chittagong Division,Chittagong,Fire Station,Nasirabad Fire Station,3122328200,"Nasirabad, Chittagong 4000, Bangladesh",22.3682,91.8046
+Bangladesh,Chittagong Division,Chittagong,Fire Station,Pahartali Fire Station,3122329200,"Pahartali, Chittagong 4202, Bangladesh",22.3761,91.7953
+Bangladesh,Chittagong Division,Chittagong,Rescue Service,Bangladesh Fire Service Chittagong,3122326300,"Dewanhat, Chittagong 4000, Bangladesh",22.3458,91.8312
+Bangladesh,Chittagong Division,Chittagong,Rescue Service,Coast Guard Station Chittagong,3122327300,"Patenga, Chittagong 4204, Bangladesh",22.2347,91.7839
+Bangladesh,Chittagong Division,Chittagong,Rescue Service,RAB Chittagong,3122328300,"Khulshi, Chittagong 4225, Bangladesh",22.3748,91.8028
+Bangladesh,Chittagong Division,Chittagong,Rescue Service,Red Crescent Chittagong,3122329300,"Chittagong 4000, Bangladesh",22.3567,91.8174
+Bangladesh,Chittagong Division,Chittagong,Tow Service,Chittagong Port Towing Service,1811100200,"Port Connecting Road, Chittagong 4100",22.3302,91.8256
+Bangladesh,Chittagong Division,Chittagong,Tow Service,Agrabad Vehicle Recovery,1811200300,"Agrabad, Chittagong 4100, Bangladesh",22.3326,91.8212
+Bangladesh,Chittagong Division,Chittagong,Tow Service,Nasirabad Breakdown Service,1811300400,"Nasirabad R/A, Chittagong 4000, Bangladesh",22.3674,91.8032
+Bangladesh,Chittagong Division,Chittagong,Tow Service,Pahartali Road Recovery,1811400500,"Pahartali, Chittagong 4202, Bangladesh",22.3758,91.7941
+Bangladesh,Chittagong Division,Chittagong,Puncture Shop,GEC Tyre Works Chittagong,1711550661,"GEC More, Chittagong 4100, Bangladesh",22.3639,91.8274
+Bangladesh,Chittagong Division,Chittagong,Puncture Shop,Agrabad Puncture Service,1711660772,"Agrabad, Chittagong 4100, Bangladesh",22.3331,91.8204
+Bangladesh,Chittagong Division,Chittagong,Puncture Shop,Nasirabad Tyre Repairs,1711770883,"Nasirabad, Chittagong 4000, Bangladesh",22.3685,91.8028
+Bangladesh,Chittagong Division,Chittagong,Puncture Shop,Pahartali Tyre Centre,1711880994,"Pahartali, Chittagong 4202, Bangladesh",22.3764,91.7936
+Bangladesh,Chittagong Division,Chittagong,Vehicle Showroom,Honda Chittagong Authorized Dealer,3122341000,"Agrabad, Chittagong 4100, Bangladesh",22.3342,91.8216
+Bangladesh,Chittagong Division,Chittagong,Vehicle Showroom,Mitsubishi Chittagong Showroom,3122342000,"CDA Avenue, Chittagong 4100, Bangladesh",22.3617,91.8262
+Bangladesh,Chittagong Division,Chittagong,Vehicle Showroom,Chittagong Toyota Centre,3122343000,"Nasirabad, Chittagong 4000, Bangladesh",22.3671,91.8037
+Bangladesh,Chittagong Division,Chittagong,Vehicle Showroom,Walton Showroom Chittagong,3122344000,"Panchlaish, Chittagong 4213, Bangladesh",22.3581,91.8149
+Nepal,Bagmati Province,Kathmandu,Hospital,Tribhuvan University Teaching Hospital,+977 1-4512505,"Maharajgunj, Kathmandu 44600, Nepal",27.7362,85.3301
+Nepal,Bagmati Province,Kathmandu,Hospital,Bir Hospital Kathmandu,+977 1-4221119,"Mahaboudha, Kathmandu 44600, Nepal",27.7024,85.3158
+Nepal,Bagmati Province,Kathmandu,Hospital,Grande International Hospital,+977 1-5159266,"Dhapasi Height, Kathmandu 44600, Nepal",27.7534,85.3194
+Nepal,Bagmati Province,Kathmandu,Hospital,Norvic International Hospital,+977 1-5970032,"Thapathali, Kathmandu 44600, Nepal",27.6956,85.3182
+Nepal,Bagmati Province,Kathmandu,Hospital,Patan Hospital,+977 1-5522295,"Lagankhel, Lalitpur, Kathmandu, Nepal",27.6688,85.3184
+Nepal,Bagmati Province,Kathmandu,Ambulance,Nepal Ambulance Service 102,102,"Tripureswor, Kathmandu 44600, Nepal",27.6978,85.3165
+Nepal,Bagmati Province,Kathmandu,Ambulance,TUTH Ambulance Kathmandu,14212600,"Maharajgunj, Kathmandu 44600, Nepal",27.7362,85.3301
+Nepal,Bagmati Province,Kathmandu,Ambulance,Nepal Red Cross Ambulance,14270650,"Red Cross Marg, Kathmandu 44600, Nepal",27.7038,85.3162
+Nepal,Bagmati Province,Kathmandu,Ambulance,Grande Hospital Ambulance,15159200,"Dhapasi, Kathmandu 44600, Nepal",27.7534,85.3194
+Nepal,Bagmati Province,Kathmandu,Police,Metropolitan Police Headquarters,+977 1-4270536,"Naxal, Kathmandu 44600, Nepal",27.7184,85.3267
+Nepal,Bagmati Province,Kathmandu,Police,New Baneshwor Police Station,14462100,"New Baneshwor, Kathmandu 44600, Nepal",27.6942,85.3378
+Nepal,Bagmati Province,Kathmandu,Police,Thamel Police Station,14410030,"Thamel, Kathmandu 44600, Nepal",27.7166,85.3113
+Nepal,Bagmati Province,Kathmandu,Police,Patan Police Station,15521100,"Patan Dhoka, Lalitpur, Nepal",27.6724,85.3227
+Nepal,Bagmati Province,Kathmandu,Police,Chabahil Police Station,14480100,"Chabahil, Kathmandu 44600, Nepal",27.7218,85.3456
+Nepal,Bagmati Province,Kathmandu,Fire Station,Kathmandu Metropolitan Fire Brigade,14211177,"Babarmahal, Kathmandu 44600, Nepal",27.7012,85.3178
+Nepal,Bagmati Province,Kathmandu,Fire Station,Lalitpur Sub-Metropolitan Fire Brigade,15521177,"Patan Dhoka, Lalitpur, Nepal",27.6684,85.3228
+Nepal,Bagmati Province,Kathmandu,Fire Station,Kirtipur Fire Station,14330177,"Kirtipur, Kathmandu, Nepal",27.6762,85.2787
+Nepal,Bagmati Province,Kathmandu,Fire Station,Budhanilkantha Fire Station,14370177,"Budhanilkantha, Kathmandu, Nepal",27.7776,85.3612
+Nepal,Bagmati Province,Kathmandu,Rescue Service,National Disaster Risk Reduction Nepal,14517077,"Singha Durbar, Kathmandu, Nepal",27.6958,85.3187
+Nepal,Bagmati Province,Kathmandu,Rescue Service,Nepal Army Search & Rescue,14411111,"Tudikhel, Kathmandu 44600, Nepal",27.7086,85.3198
+Nepal,Bagmati Province,Kathmandu,Rescue Service,Nepal Police Disaster Response,14411549,"Naxal, Kathmandu 44600, Nepal",27.7184,85.3267
+Nepal,Bagmati Province,Kathmandu,Rescue Service,Nepal Red Cross Rescue Kathmandu,14270650,"Red Cross Marg, Kathmandu 44600, Nepal",27.7038,85.3162
+Nepal,Bagmati Province,Kathmandu,Tow Service,Kathmandu 24Hr Towing,9801100200,"Ring Road, Kathmandu 44600, Nepal",27.7142,85.3321
+Nepal,Bagmati Province,Kathmandu,Tow Service,Prithvi Highway Towing Kathmandu,9801200300,"Kalanki Chowk, Kathmandu, Nepal",27.6941,85.2857
+Nepal,Bagmati Province,Kathmandu,Tow Service,Arniko Highway Recovery,9801300400,"Bhaktapur Road, Kathmandu, Nepal",27.7002,85.3812
+Nepal,Bagmati Province,Kathmandu,Tow Service,Tribhuvan Highway Towing,9801400500,"Thankot, Kathmandu, Nepal",27.6832,85.2467
+Nepal,Bagmati Province,Kathmandu,Puncture Shop,New Road Tyre Works Kathmandu,9841550660,"New Road, Kathmandu 44600, Nepal",27.7052,85.3141
+Nepal,Bagmati Province,Kathmandu,Puncture Shop,Kalanki Puncture Service,9841660770,"Kalanki Chowk, Kathmandu, Nepal",27.6943,85.2861
+Nepal,Bagmati Province,Kathmandu,Puncture Shop,Chabahil Tyre Repairs,9841770880,"Chabahil, Kathmandu 44600, Nepal",27.7216,85.3453
+Nepal,Bagmati Province,Kathmandu,Puncture Shop,Baneshwor Tyre Centre,9841880990,"New Baneshwor, Kathmandu 44600, Nepal",27.6948,85.3372
+Nepal,Bagmati Province,Kathmandu,Vehicle Showroom,Sipradi Trading Toyota Kathmandu,14482901,"Naxal, Kathmandu 44600, Nepal",27.7178,85.3276
+Nepal,Bagmati Province,Kathmandu,Vehicle Showroom,Hyundai Saptakoshi Kathmandu,14780345,"Kamaladi, Kathmandu 44600, Nepal",27.7082,85.3183
+Nepal,Bagmati Province,Kathmandu,Vehicle Showroom,Honda Nepal Showroom Kathmandu,14267890,"Tripureswor, Kathmandu 44600, Nepal",27.6976,85.3147
+Nepal,Bagmati Province,Kathmandu,Vehicle Showroom,Mahindra Nepal Patan,15523456,"Lagankhel, Lalitpur, Nepal",27.6684,85.3182
+Nepal,Gandaki Province,Pokhara,Hospital,Gandaki Medical College Teaching Hospital,+977 61-538595,"Pokhara 33700, Nepal",28.2174,83.9789
+Nepal,Gandaki Province,Pokhara,Hospital,Western Regional Hospital Pokhara,+977 61-570066,"Ramghat, Pokhara 33700, Nepal",28.2197,83.9754
+Nepal,Gandaki Province,Pokhara,Hospital,Manipal Teaching Hospital Pokhara,+977 61-552666,"Deep Heights, Pokhara 33700, Nepal",28.2321,83.9937
+Nepal,Gandaki Province,Pokhara,Hospital,Fishtail Hospital Pokhara,61521021,"Chipledhunga, Pokhara 33700, Nepal",28.2078,83.9902
+Nepal,Gandaki Province,Pokhara,Ambulance,Nepal Ambulance Pokhara,102,"Prithvi Narayan Campus Area, Pokhara 33700",28.2168,83.9802
+Nepal,Gandaki Province,Pokhara,Ambulance,Western Regional Hospital Ambulance,61520066,"Ramghat, Pokhara 33700, Nepal",28.2197,83.9754
+Nepal,Gandaki Province,Pokhara,Ambulance,Manipal Hospital Ambulance Pokhara,61526416,"Deep Heights, Pokhara 33700, Nepal",28.2321,83.9937
+Nepal,Gandaki Province,Pokhara,Ambulance,Gandaki Red Cross Ambulance,61521000,"Lakeside, Pokhara 33700, Nepal",28.2104,83.9612
+Nepal,Gandaki Province,Pokhara,Police,Pokhara Metropolitan Police,61521333,"Prithvi Narayan Campus, Pokhara 33700",28.2194,83.9836
+Nepal,Gandaki Province,Pokhara,Police,Lakeside Police Station,61462333,"Lakeside Road, Pokhara 33700, Nepal",28.2102,83.9608
+Nepal,Gandaki Province,Pokhara,Police,Chipledhunga Police Station,61521334,"Chipledhunga, Pokhara 33700, Nepal",28.2072,83.9897
+Nepal,Gandaki Province,Pokhara,Police,Birauta Police Station,61672333,"Birauta, Pokhara 33700, Nepal",28.1916,83.9668
+Nepal,Gandaki Province,Pokhara,Fire Station,Pokhara Metropolitan Fire Brigade,61521177,"Prithvi Narayan Campus, Pokhara 33700",28.2192,83.9827
+Nepal,Gandaki Province,Pokhara,Fire Station,Lakeside Fire Post Pokhara,61462177,"Lakeside, Pokhara 33700, Nepal",28.2101,83.9613
+Nepal,Gandaki Province,Pokhara,Fire Station,Chipledhunga Fire Station,61521178,"Chipledhunga, Pokhara 33700, Nepal",28.2076,83.9904
+Nepal,Gandaki Province,Pokhara,Fire Station,Hemja Fire Station Pokhara,61672177,"Hemja, Pokhara 33700, Nepal",28.2548,84.0126
+Nepal,Gandaki Province,Pokhara,Rescue Service,Gandaki Province Disaster Management,61521055,"Pokhara 33700, Nepal",28.2182,83.9841
+Nepal,Gandaki Province,Pokhara,Rescue Service,Nepal Police Mountain Rescue Pokhara,61521333,"Prithvi Narayan Area, Pokhara 33700",28.2192,83.9827
+Nepal,Gandaki Province,Pokhara,Rescue Service,Himalayan Rescue Association Pokhara,61521333,"Lakeside, Pokhara 33700, Nepal",28.2106,83.9617
+Nepal,Gandaki Province,Pokhara,Rescue Service,Pokhara Tourism Police Search & Rescue,61462133,"Lakeside Area, Pokhara 33700, Nepal",28.2108,83.9621
+Nepal,Gandaki Province,Pokhara,Tow Service,Pokhara 24Hr Towing Service,9856100200,"Prithvi Highway, Pokhara 33700, Nepal",28.2214,83.9846
+Nepal,Gandaki Province,Pokhara,Tow Service,Lakeside Breakdown Service,9856200300,"Lakeside Road, Pokhara 33700, Nepal",28.2098,83.9619
+Nepal,Gandaki Province,Pokhara,Tow Service,Prithvi Highway Recovery Pokhara,9856300400,"Naubise Road, Pokhara, Nepal",28.2256,83.9908
+Nepal,Gandaki Province,Pokhara,Tow Service,Siddhartha Highway Towing,9856400500,"Siddhartha Highway, Pokhara, Nepal",28.2004,83.9771
+Nepal,Gandaki Province,Pokhara,Puncture Shop,Lakeside Tyre Works Pokhara,9846550660,"Lakeside Road, Pokhara 33700, Nepal",28.2107,83.9624
+Nepal,Gandaki Province,Pokhara,Puncture Shop,Prithvi Chowk Puncture Service,9846660770,"Prithvi Chowk, Pokhara 33700, Nepal",28.2189,83.9852
+Nepal,Gandaki Province,Pokhara,Puncture Shop,Chipledhunga Tyre Repairs,9846770880,"Chipledhunga, Pokhara 33700, Nepal",28.2079,83.9899
+Nepal,Gandaki Province,Pokhara,Puncture Shop,Birauta Tyre Works Pokhara,9846880990,"Birauta, Pokhara 33700, Nepal",28.1922,83.9674
+Nepal,Gandaki Province,Pokhara,Vehicle Showroom,Sipradi Toyota Pokhara,61521901,"Prithvi Narayan Road, Pokhara 33700",28.2208,83.9814
+Nepal,Gandaki Province,Pokhara,Vehicle Showroom,Hyundai Pokhara Showroom,61521902,"Chipledhunga, Pokhara 33700, Nepal",28.2074,83.9908
+Nepal,Gandaki Province,Pokhara,Vehicle Showroom,Honda Pokhara Centre,61521903,"Prithvi Chowk, Pokhara 33700, Nepal",28.2186,83.9847
+Nepal,Gandaki Province,Pokhara,Vehicle Showroom,TVS Showroom Pokhara,61521904,"Lakeside Road, Pokhara 33700, Nepal",28.2113,83.9627
+India,Tamil Nadu,Chennai,Hospital,IITM Institute Hospital,+91 44 2257 8300,"Near Kendra Vidyalaya, IITM Campus, School 1st Cross St, Indian Institute Of Technology, Chennai, Tamil Nadu 600036",12.9929393,80.2314687
+India,Tamil Nadu,Chennai,Hospital,VHS Multispeciality Hospital,+91 98847 30000,"State Highway 49A, Tharamani, Chennai, Tamil Nadu 600113",13.0025369,80.2473355
+India,Tamil Nadu,Chennai,Hospital,Prashanth Super Speciality Hospital,+91 44 4680 5544,"36 & 36A, Velachery Main Rd, Dhandeeswaram, Velachery, Chennai, Tamil Nadu 600042",12.978498,80.2213184
+India,Tamil Nadu,Chennai,Hospital,BloomLife Hospital,+91 44 4000 0009,"32, Taramani Link Rd, VGP Seetapathi Street, Baby Nagar, Velachery, Chennai, Tamil Nadu 600042",12.979622,80.227706
+India,Tamil Nadu,Chennai,Hospital,Aaradhya Hospital,+91 99636 98968,"31A, Peeliamman Kovil Street, Mahathma Gandhi Nagar, Tharamani, Chennai, Tamil Nadu 600113",12.9825816,80.239716
+India,Tamil Nadu,Chennai,Police,J13 Tharamani Police Station,+91 94981 00168,"81/12, Nehru St, Kanagam, Tharamani, Chennai, Tamil Nadu 600113",12.994747,80.2429914
+India,Tamil Nadu,Chennai,Police,J2 Adyar Police Station,+91 90924 57667,"Dr Muthu Lakshmi Rd, Indira Nagar, Adyar, Chennai, Tamil Nadu 600020",12.9978136,80.2556662
+India,Tamil Nadu,Chennai,Police,J6 Thiruvanmiyur Police Station,+91 44 2491 1350,"Sannadi St, Lalitha Nagar, Thiruvanmiyur, Chennai, Tamil Nadu 600041",12.9844943,80.2609848
+India,Tamil Nadu,Chennai,Ambulance,Bethel Ambulance Services,+91 91763 08428,"28, 1st Ave, Indira Nagar, Adyar, Chennai, Tamil Nadu 600020",12.9995788,80.2537561
+India,Tamil Nadu,Chennai,Ambulance,Chennai City Ambulance & Funeral Services,+91 96268 85969,"9/1, 10th Ln, Indira Nagar, Adyar, Chennai, Tamil Nadu 600020",12.9936179,80.2513543
+India,Tamil Nadu,Chennai,Ambulance,Deepee Ambulance Service,+91 98407 84957,"No: 43-A, 100 Feet Road, Thanthai Periyar Nagar, Anna Nagar, Tharamani, Chennai, Tamil Nadu 600113",12.9814516,80.2377181
+India,Tamil Nadu,Chennai,Fire Station,Velachery Fire Station,+91 44 2829 4135,"Tiruvalluvar St, Annai Indira Nagar, Velachery, Chennai, Tamil Nadu 600042",12.9768023,80.2276046
+India,Tamil Nadu,Chennai,Fire Station,Thiruvanmiyur Fire Station,+91 44 2440 1213,"Shop No. 2, East Coast Road, near Marundeeswarar Temple, Lalitha Nagar, Thiruvanmiyur, Chennai, Tamil Nadu 600041",12.9853432,80.2598047
+India,Tamil Nadu,Chennai,Rescue Service,Blue Cross of India,+91 44 4627 4999,"72, Velachery Main Rd, Guindy, Chennai, Tamil Nadu 600032",12.9996877,80.2155845
+India,Tamil Nadu,Chennai,Rescue Service,Madras Animal Rescue Society,+91 99400 59810,"East Coast Rd, PRS Nagar, Palavakkam, Chennai, Tamil Nadu 600041",12.966208,80.2568325
+India,Tamil Nadu,Chennai,Tow Service,TVS Auto Assist - Roadside Assistance,+91 1800 258 9191,"Kochar Bliss, A8 & A9, Thiru Vi Ka Industrial Estate, Guindy, Chennai, Tamil Nadu 600032",13.0131679,80.2110451
+India,Tamil Nadu,Chennai,Tow Service,Elite Roadside Assistance,+91 72990 50247,"No:22, Labour Colony 4th St, 3rd Phase, Thiru Vi Ka Industrial Estate, Guindy, Chennai, Tamil Nadu 600032",13.015781,80.212077
+India,Tamil Nadu,Chennai,Tow Service,Elephant Towing Service,+91 93426 28202,"12/29 Boo Begum, 3rd St, Mount Road, Express Estate, Royapettah, Chennai, Tamil Nadu 600002",13.062342,80.26348
+India,Tamil Nadu,Chennai,Puncture Shop,Ganesh Puncture Shop,+91 88256 64033,"46, MGR Rd, Bharathi Nagar, Perungudi, Chennai, Tamil Nadu 600042",12.9770353,80.2330262
+India,Tamil Nadu,Chennai,Puncture Shop,Alex Puncture Work 24x7,+91 98948 48169,"1, Jawaharlal Nehru Salai, Bharathi Nagar, Tharamani, Chennai, Tamil Nadu 600113",12.9801458,80.2339915
+India,Tamil Nadu,Chennai,Puncture Shop,KK Puncture Kadai,+91 92832 28707,"No.1, Sri Muthumariyammman Koil Street, Periyar Nagar, Tharamani, Chennai, Tamil Nadu 600113",12.9811811,80.239264
+India,Tamil Nadu,Chennai,Puncture Shop,Adyar Puncture Point,+91 90697 78888,"150, Muthulakshmi Salai, Lattice Brg Rd, Venkata Rathinam Nagar, Adyar, Chennai, Tamil Nadu 600020",12.9997979,80.2560472
+India,Tamil Nadu,Chennai,Vehicle Showroom,"Maruti Suzuki ARENA (Khivraj Motors, Perungudi)",+91 80 6251 0335,"Plot No 6, Developed E&E Industrial Estate, Perungudi, Chennai, Tamil Nadu 600096",12.9580871,80.2445759
+India,Tamil Nadu,Chennai,Vehicle Showroom,"NEXA (ABT Maruti, Guindy)",+91 80 6251 0095,"No.123, Velachery Main Rd, Kannigapuram, Guindy, Chennai, Tamil Nadu 600032",13.0014138,80.2182411
+India,Tamil Nadu,Chennai,Vehicle Showroom,Tata Ace Showroom Taramani,+91 89397 72903,"12, Kattabomman Street, Jawaharlal Nehru Salai, Mahathma Gandhi Nagar, Tharamani, Chennai, Tamil Nadu 600113",12.9815537,80.2392387
