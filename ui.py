@@ -1,15 +1,9 @@
 import streamlit as st
-#THEME INJECTION — call once at the top of app.py
 
-def inject_theme():
-    st.markdown(
-        """
-        <style>
-        /* ── Google Fonts ─────────────────────────────────────────── */
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
-
-        /* ── CSS Variables ────────────────────────────────────────── */
-        :root {
+# THEME INJECTION — call once at the top of app.py
+def inject_theme(dark_mode=True):
+    if dark_mode:
+        theme_vars = """
             --bg:        #0f172a;
             --surface:   #1e293b;
             --surface2:  #263248;
@@ -21,39 +15,62 @@ def inject_theme():
             --border:    rgba(255,255,255,0.08);
             --radius:    14px;
             --radius-sm: 8px;
-        }
+        """
+    else:
+        theme_vars = """
+            --bg:        #f8fafc;
+            --surface:   #ffffff;
+            --surface2:  #f1f5f9;
+            --red:       #dc2626;
+            --red-hover: #b91c1c;
+            --orange:    #f97316;
+            --text:      #0f172a;
+            --muted:     #64748b;
+            --border:    rgba(0,0,0,0.10);
+            --radius:    14px;
+            --radius-sm: 8px;
+        """
 
-        /* ── Base ─────────────────────────────────────────────────── */
-        html, body, [class*="css"], .stApp {
+    st.markdown(
+        f"""
+        <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+        :root {{
+            {theme_vars}
+        }}
+
+        html, body, [class*="css"], .stApp {{
             font-family: 'Inter', system-ui, sans-serif !important;
             background-color: var(--bg) !important;
             color: var(--text) !important;
-        }
+        }}
 
-        /* Hide Streamlit default header/footer */
-        #MainMenu, footer, header { visibility: hidden; }
-        .block-container {
+        #MainMenu, footer {{ visibility: hidden; }}
+        /* Keep sidebar toggle arrow visible — only hide Streamlit branding */
+        header [data-testid="stToolbar"] {{ visibility: hidden; }}
+        header .stAppDeployButton {{ display: none; }}
+        header {{ background: transparent !important; }}
+        .block-container {{
             padding-top: 1.5rem !important;
             padding-bottom: 3rem !important;
             max-width: 680px !important;
-        }
+        }}
 
-        /* ── Streamlit native element overrides ───────────────────── */
         .stSelectbox > div > div,
-        .stTextInput > div > div > input {
+        .stTextInput > div > div > input {{
             background-color: var(--surface) !important;
             border: 1px solid var(--border) !important;
             color: var(--text) !important;
             border-radius: var(--radius-sm) !important;
-        }
-        .stCheckbox label p { color: var(--text) !important; }
-        div[data-testid="stMarkdownContainer"] p {
+        }}
+        .stCheckbox label p {{ color: var(--text) !important; }}
+        div[data-testid="stMarkdownContainer"] p {{
             color: var(--text) !important;
             font-size: 0.93rem;
-        }
+        }}
 
-        /* ── Buttons ──────────────────────────────────────────────── */
-        .stButton > button {
+        .stButton > button {{
             background: var(--surface) !important;
             color: var(--text) !important;
             border: 1px solid var(--border) !important;
@@ -62,15 +79,14 @@ def inject_theme():
             font-size: 0.9rem !important;
             padding: 0.55rem 1.2rem !important;
             transition: all 0.18s ease !important;
-        }
-        .stButton > button:hover {
+        }}
+        .stButton > button:hover {{
             background: var(--surface2) !important;
             border-color: rgba(255,255,255,0.18) !important;
             transform: translateY(-1px);
-        }
+        }}
 
-        /* Primary (ONE TAP) button override */
-        .stButton > button[kind="primary"] {
+        .stButton > button[kind="primary"] {{
             background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%) !important;
             border: none !important;
             color: #fff !important;
@@ -81,15 +97,14 @@ def inject_theme():
             border-radius: 16px !important;
             box-shadow: 0 0 0 0 rgba(220,38,38,0.7);
             animation: pulse-red 2.2s infinite;
-        }
-        .stButton > button[kind="primary"]:hover {
+        }}
+        .stButton > button[kind="primary"]:hover {{
             background: linear-gradient(135deg, #b91c1c 0%, #991b1b 100%) !important;
             transform: translateY(-2px) !important;
             box-shadow: 0 8px 25px rgba(220,38,38,0.45) !important;
-        }
+        }}
 
-        /* Link buttons */
-        .stLinkButton > a {
+        .stLinkButton > a {{
             background: var(--surface2) !important;
             color: var(--text) !important;
             border: 1px solid var(--border) !important;
@@ -98,61 +113,55 @@ def inject_theme():
             font-size: 0.85rem !important;
             transition: all 0.15s ease !important;
             text-decoration: none !important;
-        }
-        .stLinkButton > a:hover {
+        }}
+        .stLinkButton > a:hover {{
             background: var(--red) !important;
             border-color: var(--red) !important;
             transform: translateY(-1px) !important;
-        }
+        }}
 
-        /* ── Alerts ───────────────────────────────────────────────── */
-        div[data-testid="stAlert"] {
+        div[data-testid="stAlert"] {{
             border-radius: var(--radius) !important;
             border: none !important;
-        }
+        }}
 
-        /* ── Pulse animation ──────────────────────────────────────── */
-        @keyframes pulse-red {
-            0%   { box-shadow: 0 0 0 0 rgba(220,38,38,0.55); }
-            70%  { box-shadow: 0 0 0 14px rgba(220,38,38,0); }
-            100% { box-shadow: 0 0 0 0 rgba(220,38,38,0); }
-        }
-        @keyframes blink-badge {
-            0%, 100% { opacity: 1; }
-            50%       { opacity: 0.5; }
-        }
-        @keyframes slide-in {
-            from { transform: translateY(-8px); opacity: 0; }
-            to   { transform: translateY(0);    opacity: 1; }
-        }
+        @keyframes pulse-red {{
+            0%   {{ box-shadow: 0 0 0 0 rgba(220,38,38,0.55); }}
+            70%  {{ box-shadow: 0 0 0 14px rgba(220,38,38,0); }}
+            100% {{ box-shadow: 0 0 0 0 rgba(220,38,38,0); }}
+        }}
+        @keyframes blink-badge {{
+            0%, 100% {{ opacity: 1; }}
+            50%       {{ opacity: 0.5; }}
+        }}
+        @keyframes slide-in {{
+            from {{ transform: translateY(-8px); opacity: 0; }}
+            to   {{ transform: translateY(0);    opacity: 1; }}
+        }}
 
-        /* ── Progress bar ─────────────────────────────────────────── */
-        div[data-testid="stProgressBar"] > div {
+        div[data-testid="stProgressBar"] > div {{
             background: linear-gradient(90deg, var(--red), var(--orange)) !important;
             border-radius: 99px !important;
-        }
-        div[data-testid="stProgressBar"] {
+        }}
+        div[data-testid="stProgressBar"] {{
             background: var(--surface2) !important;
             border-radius: 99px !important;
-        }
+        }}
 
-        /* ── Sidebar ──────────────────────────────────────────────── */
-        section[data-testid="stSidebar"] {
+        section[data-testid="stSidebar"] {{
             background-color: var(--surface) !important;
-        }
-        section[data-testid="stSidebar"] * {
+        }}
+        section[data-testid="stSidebar"] * {{
             color: var(--text) !important;
-        }
+        }}
 
-        /* ── Divider ──────────────────────────────────────────────── */
-        hr { border-color: var(--border) !important; }
+        hr {{ border-color: var(--border) !important; }}
 
-        /* ── Expander ─────────────────────────────────────────────── */
-        details {
+        details {{
             background: var(--surface) !important;
             border: 1px solid var(--border) !important;
             border-radius: var(--radius) !important;
-        }
+        }}
         </style>
         """,
         unsafe_allow_html=True,
@@ -184,7 +193,7 @@ def render_hero(gps_active=False, total_contacts=None, total_countries=None, tot
 
     st.markdown(hero_html, unsafe_allow_html=True)
 
-#DASHBOARD STATS BAR
+# DASHBOARD STATS BAR
 
 def render_dashboard(gps_active, hospitals, ambulances, police, countries=None):
     items = [
@@ -233,7 +242,7 @@ def render_emergency_banner():
     )
     st.markdown(banner_html, unsafe_allow_html=True)
 
-#SECTION HEADER
+# SECTION HEADER
 
 def render_section_header(icon, title, subtitle=None):
     sub_html = (
@@ -252,7 +261,7 @@ def render_section_header(icon, title, subtitle=None):
     )
     st.markdown(header_html, unsafe_allow_html=True)
 
-#SERVICE CARD (best result — highlighted)
+# SERVICE CARD (best result — highlighted)
 
 def render_service_card_header(name, distance_km, phone, badge, accent_color="#dc2626"):
     phone_html = (
@@ -297,7 +306,7 @@ def render_secondary_row(name, distance_km, phone, badge):
     )
     st.markdown(row_html, unsafe_allow_html=True)
 
-#MAP CONTAINER WRAPPER
+# MAP CONTAINER WRAPPER
 
 def render_map_header():
     header_html = (
@@ -315,7 +324,6 @@ def render_map_header():
     )
     st.markdown(header_html, unsafe_allow_html=True)
 
-    # Legend
     legend_items = [
         ("#22c55e", "You"),
         ("#dc2626", "Hospital"),
@@ -337,7 +345,7 @@ def render_map_header():
         unsafe_allow_html=True,
     )
 
-#LOCATION CARD (shown after GPS detect)
+# LOCATION CARD (shown after GPS detect)
 
 def render_location_card(lat, lon, accuracy=None):
     card_html = (
@@ -364,7 +372,7 @@ def render_location_card(lat, lon, accuracy=None):
     )
     st.markdown(card_html, unsafe_allow_html=True)
 
-#"NO DATA" empty state
+# "NO DATA" empty state
 
 def render_no_data(service_type):
     st.markdown(
