@@ -22,9 +22,6 @@ from utils import (
     add_recent_location,
 )
 
-# ─────────────────────────────────────────────────────────────────────────────
-# CONFIG
-# ─────────────────────────────────────────────────────────────────────────────
 
 APP_DIR   = os.path.dirname(os.path.abspath(__file__))
 DATA_PATH = os.path.join(APP_DIR, "data.csv")
@@ -70,9 +67,6 @@ REQUIRED_COLUMNS = {"City", "Country", "Latitude", "Longitude", "Name", "Phone",
 
 APP_VERSION = "2.0.0"
 
-# ─────────────────────────────────────────────────────────────────────────────
-# PAGE CONFIG — must be first Streamlit call
-# ─────────────────────────────────────────────────────────────────────────────
 
 st.set_page_config(
     page_title="NexusSOS",
@@ -81,9 +75,6 @@ st.set_page_config(
     initial_sidebar_state="collapsed",
 )
 
-# ─────────────────────────────────────────────────────────────────────────────
-# SESSION STATE
-# ─────────────────────────────────────────────────────────────────────────────
 
 DEFAULTS = {
     "lat": None,
@@ -116,9 +107,6 @@ for key, val in DEFAULTS.items():
 
 lang = st.session_state.language
 
-# ─────────────────────────────────────────────────────────────────────────────
-# THEME / CSS INJECTION
-# ─────────────────────────────────────────────────────────────────────────────
 
 def inject_theme(dark_mode=True):
     if dark_mode:
@@ -374,9 +362,6 @@ def inject_theme(dark_mode=True):
 
 inject_theme(dark_mode=st.session_state.dark_mode)
 
-# ─────────────────────────────────────────────────────────────────────────────
-# DATA LOADING
-# ─────────────────────────────────────────────────────────────────────────────
 
 if not os.path.exists(DATA_PATH):
     st.error(f"⚠️ **data.csv** not found.\n\nExpected: `{DATA_PATH}`\n\nPlace `data.csv` in the same folder as `app.py`.")
@@ -404,9 +389,6 @@ if data.empty:
     st.error("⚠️ No usable rows in data.csv after cleaning.")
     st.stop()
 
-# ─────────────────────────────────────────────────────────────────────────────
-# UTILITIES
-# ─────────────────────────────────────────────────────────────────────────────
 
 def distance(lat1, lon1, lat2, lon2):
     R = 6371
@@ -452,46 +434,93 @@ def toggle_favorite(name):
     else:
         st.session_state.favorites.append(name)
 
-# ─────────────────────────────────────────────────────────────────────────────
-# UI COMPONENTS
-# ─────────────────────────────────────────────────────────────────────────────
 
 def ui_hero():
-    gps_active    = st.session_state.lat is not None
-    status_color  = "#22c55e" if gps_active else "#64748b"
-    status_text   = "Location Ready" if gps_active else "Tap to Activate GPS"
+    gps_active   = st.session_state.lat is not None
+    n_services   = len(data)
+    n_countries  = data["Country"].nunique()
 
-    st.markdown(f"""
-    <div style="background:linear-gradient(135deg,#1e3a5f 0%,#0f172a 100%);
-                border:1px solid rgba(220,38,38,.28);border-radius:22px;
-                padding:1.8rem 1.5rem 1.4rem;text-align:center;
-                margin-bottom:1rem;animation:fade-in .4s ease;">
-      <div style="width:58px;height:58px;margin:0 auto 12px;
-                  background:linear-gradient(135deg,#dc2626,#f97316);
-                  border-radius:16px;display:flex;align-items:center;
-                  justify-content:center;font-size:1.8rem;
-                  box-shadow:0 8px 24px rgba(220,38,38,.35);">🚨</div>
-      <h1 style="color:#ffffff;font-size:1.9rem;font-weight:900;
-                 margin:0 0 6px;letter-spacing:-0.02em;">NexusSOS</h1>
-      <p style="color:#a8c4e0;margin:0 0 12px;font-size:.85rem;">
-        AI-Powered Emergency Response · {len(data):,} services · {data["Country"].nunique()} countries
-      </p>
-      <div style="display:inline-flex;align-items:center;gap:6px;
-                  background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);
-                  border-radius:99px;padding:.3rem .85rem;font-size:.8rem;font-weight:700;">
-        <span style="width:8px;height:8px;border-radius:50%;background:{status_color};
-                     display:inline-block;{'animation:blink 1.2s infinite;' if gps_active else ''}">
-        </span>
-        <span style="color:{status_color};">{status_text}</span>
-      </div>
-    </div>
-    """, unsafe_allow_html=True)
+    if gps_active:
+        gps_dot   = '#22c55e'
+        gps_blink = 'animation:blink 1.4s infinite;'
+        gps_label = '🟢 GPS Connected'
+    else:
+        gps_dot   = '#64748b'
+        gps_blink = ''
+        gps_label = '🔴 GPS Not Connected'
+
+    stats = [
+        ("🏥", f"{n_services:,}", "Services"),
+        ("🌍", str(n_countries),  "Countries"),
+        ("⚡", "&lt;2s",          "GPS Lock"),
+        ("🚑", "24/7",            "Emergency"),
+    ]
+    stat_cards = ""
+    for icon, val, lbl in stats:
+        stat_cards += (
+            f'<div style="flex:1;min-width:0;background:rgba(255,255,255,.04);'
+            f'border:1px solid rgba(255,255,255,.08);border-radius:12px;'
+            f'padding:.55rem .35rem;text-align:center;">'
+            f'<div style="font-size:1.1rem;line-height:1;">{icon}</div>'
+            f'<div style="font-size:1rem;font-weight:900;color:#f1f5f9;'
+            f'letter-spacing:-.01em;line-height:1.15;margin:.15rem 0 .1rem;">{val}</div>'
+            f'<div style="font-size:.6rem;color:#64748b;font-weight:600;'
+            f'text-transform:uppercase;letter-spacing:.05em;">{lbl}</div>'
+            f'</div>'
+        )
+
+    st.markdown(
+        '<div style="background:linear-gradient(160deg,#1a2d4a 0%,#0d1829 55%,#0f172a 100%);'
+        'border:1px solid rgba(220,38,38,.3);border-radius:20px;'
+        'padding:1.1rem 1.25rem .95rem;margin-bottom:.75rem;'
+        'animation:fade-in .35s ease;'
+        'box-shadow:0 4px 32px rgba(0,0,0,.45),0 0 0 1px rgba(220,38,38,.08);">'
+
+
+        '<div style="display:flex;align-items:center;gap:.85rem;margin-bottom:.8rem;">'
+        '<div style="width:46px;height:46px;min-width:46px;'
+        'background:linear-gradient(135deg,#dc2626,#f97316);'
+        'border-radius:14px;display:flex;align-items:center;'
+        'justify-content:center;font-size:1.5rem;'
+        'box-shadow:0 6px 18px rgba(220,38,38,.4);">🚨</div>'
+        '<div style="flex:1;min-width:0;">'
+        '<div style="font-size:1.45rem;font-weight:900;color:#ffffff;'
+        'letter-spacing:-.025em;line-height:1.1;">NexusSOS</div>'
+        '<div style="font-size:.72rem;color:#94a3b8;font-weight:500;'
+        'margin-top:.1rem;letter-spacing:.01em;">Respond Faster. Save Lives.</div>'
+        '</div>'
+        f'<div style="display:flex;align-items:center;gap:5px;'
+        f'background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);'
+        f'border-radius:99px;padding:.28rem .75rem;white-space:nowrap;">'
+        f'<span style="width:7px;height:7px;border-radius:50%;'
+        f'background:{gps_dot};display:inline-block;{gps_blink}"></span>'
+        f'<span style="font-size:.7rem;font-weight:700;color:{gps_dot};">{gps_label}</span>'
+        f'</div>'
+        '</div>'
+
+
+        '<div style="height:1px;background:rgba(255,255,255,.07);margin-bottom:.7rem;"></div>'
+
+
+        f'<div style="display:flex;gap:.45rem;">{stat_cards}</div>'
+
+
+        '<div style="margin-top:.7rem;display:flex;align-items:center;gap:.5rem;flex-wrap:wrap;">'
+        '<span style="font-size:.65rem;color:#475569;font-weight:600;'
+        'text-transform:uppercase;letter-spacing:.06em;">'
+        '🛡️ IIT Madras CoERS · MoRTH · Road Safety Hackathon 2026'
+        '</span>'
+        '<span style="margin-left:auto;font-size:.65rem;font-weight:700;color:#22c55e;'
+        'background:rgba(34,197,94,.1);border:1px solid rgba(34,197,94,.25);'
+        'padding:.15rem .55rem;border-radius:99px;">● LIVE</span>'
+        '</div>'
+        '</div>',
+        unsafe_allow_html=True,
+    )
 
 def ui_settings_panel():
     """Inline settings expander — replaces the sidebar entirely."""
     with st.expander("⚙️  Settings", expanded=st.session_state.show_settings):
-
-        # ── Language ──────────────────────────────────────────────────────────
         lang_options = {code: TRANSLATIONS[code]["lang_name"] for code in TRANSLATIONS}
         c1, c2 = st.columns([2, 1])
         with c1:
@@ -522,7 +551,7 @@ def ui_settings_panel():
 
         st.divider()
 
-        # ── Recent Locations ──────────────────────────────────────────────────
+
         if st.session_state.recent_locations:
             st.markdown("**🕘 Recent Locations**")
             for i, loc in enumerate(st.session_state.recent_locations):
@@ -533,7 +562,7 @@ def ui_settings_panel():
                     st.rerun()
             st.divider()
 
-        # ── Favorites ─────────────────────────────────────────────────────────
+
         if st.session_state.favorites:
             st.markdown("**⭐ Favorite Hospitals**")
             for name in st.session_state.favorites:
@@ -546,7 +575,7 @@ def ui_settings_panel():
                         st.rerun()
             st.divider()
 
-        # ── About ─────────────────────────────────────────────────────────────
+
         st.markdown(f"""
         <div style="background:var(--surface2);border:1px solid var(--border);
                     border-radius:10px;padding:.85rem 1rem;font-size:.8rem;color:var(--muted);">
@@ -575,12 +604,12 @@ def ui_admin_panel():
                     st.error(t(lang, "admin_wrong_password"))
             return
 
-        # ── Tabs ──────────────────────────────────────────────────────────────
+
         tab_add, tab_search, tab_csv, tab_pending, tab_analytics = st.tabs(
             ["➕ Add", "🔍 Search", "📁 CSV", "📋 Pending", "📊 Analytics"]
         )
 
-        # ADD SERVICE
+
         with tab_add:
             st.markdown("**Add New Service**")
             a_name    = st.text_input("Name",    key="a_name")
@@ -612,7 +641,7 @@ def ui_admin_panel():
                 else:
                     st.warning("Fill in Name, Phone, City and Country.")
 
-        # SEARCH & EDIT/DELETE
+
         with tab_search:
             st.markdown("**Search & Manage Services**")
             q = st.text_input("Search by name or city", key="admin_search_q")
@@ -639,7 +668,7 @@ def ui_admin_panel():
                                 except Exception as e:
                                     st.error(f"Delete failed: {e}")
 
-        # CSV UPLOAD / DOWNLOAD
+
         with tab_csv:
             st.markdown("**Upload CSV**")
             uploaded = st.file_uploader("Upload new data.csv", type=["csv"], key="csv_upload")
@@ -688,12 +717,12 @@ def ui_admin_panel():
                 use_container_width=True,
             )
 
-        # PENDING REQUESTS (placeholder — real impl uses a DB)
+
         with tab_pending:
             st.markdown("**Pending Service Requests**")
             st.info("No pending requests. (Connect a database to enable real-time submissions.)")
 
-        # IN-SESSION ANALYTICS
+
         with tab_analytics:
             ui_analytics()
 
@@ -907,7 +936,6 @@ def ui_no_data(service_type):
     """, unsafe_allow_html=True)
 
 def ui_map(user_lat, user_lon, map_points):
-    # Map header
     st.markdown("""
     <div style="background:var(--surface);border:1px solid var(--border);
                 border-radius:var(--radius) var(--radius) 0 0;padding:.7rem 1rem;
@@ -920,7 +948,7 @@ def ui_map(user_lat, user_lon, map_points):
     </div>
     """, unsafe_allow_html=True)
 
-    # Legend
+
     legend = [("#22c55e","You"),("#dc2626","Hospital"),("#f97316","Ambulance"),
               ("#3b82f6","Police"),("#7c3aed","Towing"),("#991b1b","Fire")]
     dots = "".join(
@@ -1011,9 +1039,6 @@ def ui_footer():
     </div>
     """, unsafe_allow_html=True)
 
-# ─────────────────────────────────────────────────────────────────────────────
-# RENDER RESULT (wraps card + secondary row)
-# ─────────────────────────────────────────────────────────────────────────────
 
 def render_result(result, label, key_prefix, service_type, highlight=False):
     badge  = "📋 Directory"
@@ -1026,246 +1051,320 @@ def render_result(result, label, key_prefix, service_type, highlight=False):
     else:
         ui_secondary_row(result["name"], result["distance_km"], result["phone"], badge)
 
-# ─────────────────────────────────────────────────────────────────────────────
-# MAIN APP
-# ─────────────────────────────────────────────────────────────────────────────
 
-# Hero
+try:
+    from ai_chat import render_ai_chat_tab
+    AI_AVAILABLE = True
+except ImportError:
+    AI_AVAILABLE = False
+
+
 ui_hero()
 
-# ── Settings + Admin (no sidebar!) ──────────────────────────────────────────
-ui_settings_panel()
-ui_admin_panel()
+tab_labels = ["🚨 Emergency Services", "🤖 AI Triage"]
+tab_services, tab_ai = st.tabs(tab_labels)
 
-st.divider()
+with tab_services:
+    ui_settings_panel()
+    ui_admin_panel()
 
-# ── ONE TAP EMERGENCY ────────────────────────────────────────────────────────
+    st.divider()
 
-one_tap_clicked = st.button(
-    t(lang, "one_tap"), use_container_width=True, type="primary"
-)
-if one_tap_clicked:
-    st.session_state.emergency_mode = True
-    track("one_tap")
-    log_event("one_tap_pressed", language=lang)
 
-one_tap = st.session_state.emergency_mode
+    one_tap_clicked = st.button(
+        t(lang, "one_tap"), use_container_width=True, type="primary"
+    )
+    if one_tap_clicked:
+        st.session_state.emergency_mode = True
+        track("one_tap")
+        log_event("one_tap_pressed", language=lang)
 
-if one_tap:
-    c_exit, _ = st.columns([1, 3])
-    with c_exit:
-        if st.button("✖ Exit Emergency", key="exit_em"):
-            st.session_state.emergency_mode = False
-            st.rerun()
-    ui_sos_countdown()
+    one_tap = st.session_state.emergency_mode
 
-# ── LOCATION DETECTION ───────────────────────────────────────────────────────
+    if one_tap:
+        c_exit, _ = st.columns([1, 3])
+        with c_exit:
+            if st.button("✖ Exit Emergency", key="exit_em"):
+                st.session_state.emergency_mode = False
+                st.rerun()
+        ui_sos_countdown()
 
-if not one_tap:
-    st.caption(t(lang, "click_below"))
-else:
-    st.caption("📍 **Allow** location access when prompted — GPS may take a moment.")
 
-loc_c1, loc_c2 = st.columns([4, 1])
-with loc_c1:
-    st.caption("iPhone/Android: ensure Location is enabled for your browser in phone Settings.")
-with loc_c2:
-    gps_retry = st.button("🔄", key="gps_retry_btn", use_container_width=True)
+    if not one_tap:
+        st.caption(t(lang, "click_below"))
+    else:
+        st.caption("📍 **Allow** location access when prompted — GPS may take a moment.")
 
-if gps_retry:
+    loc_c1, loc_c2 = st.columns([4, 1])
+    with loc_c1:
+        st.caption("iPhone/Android: ensure Location is enabled for your browser in phone Settings.")
+    with loc_c2:
+        gps_retry = st.button("🔄", key="gps_retry_btn", use_container_width=True)
+
+    if gps_retry:
+        st.session_state.gps_attempted = True
+
+    if one_tap:
+        with st.spinner("📍 Acquiring GPS…"):
+            loc = streamlit_geolocation()
+    else:
+        loc = streamlit_geolocation()
+
     st.session_state.gps_attempted = True
 
-if one_tap:
-    with st.spinner("📍 Acquiring GPS…"):
-        loc = streamlit_geolocation()
-else:
-    loc = streamlit_geolocation()
-
-st.session_state.gps_attempted = True
-
-got_fresh_fix = bool(loc) and loc.get("latitude") is not None
-if got_fresh_fix:
-    st.session_state.lat          = loc["latitude"]
-    st.session_state.lon          = loc["longitude"]
-    st.session_state.gps_accuracy = loc.get("accuracy")
-    st.session_state.used_ip_fallback = False
-    track("gps_ok")
-    st.success("📍 Location confirmed — finding nearest services.")
-elif loc and loc.get("latitude") is None and st.session_state.gps_attempted:
-    st.warning(
-        "📍 Location blocked. Tap the 🔒 lock icon in your address bar → "
-        "set Location to **Allow** → press 🔄 Retry."
-    )
-
-lat = st.session_state.lat
-lon = st.session_state.lon
-
-# ── IP Fallback ───────────────────────────────────────────────────────────────
-
-if one_tap and (lat is None or lon is None):
-    st.error(t(lang, "allow_location"))
-    if st.button("📶 Use Approximate Network Location", key="ip_fallback_btn"):
-        with st.spinner("Estimating location from network…"):
-            ip_lat, ip_lon = get_ip_location()
-        if ip_lat is not None:
-            st.session_state.lat = ip_lat
-            st.session_state.lon = ip_lon
-            st.session_state.used_ip_fallback = True
-            st.rerun()
-        else:
-            st.error("Could not detect approximate location. Check your connection.")
-    st.stop()
-
-if st.session_state.used_ip_fallback and lat is not None:
-    st.warning("📶 Using city-level network location (GPS unavailable) — not your exact position.")
-
-# ── MANUAL SEARCH FIELDS ──────────────────────────────────────────────────────
-
-recent_search_trigger = st.session_state.pop("recent_search_trigger", False)
-
-if not one_tap:
-    use_gps = st.checkbox(t(lang, "use_gps"))
-    countries = sorted(data["Country"].unique())
-    default_idx = countries.index("India") if "India" in countries else 0
-    country = st.selectbox(t(lang, "country"), countries, index=default_idx)
-    city    = st.text_input(t(lang, "city"), disabled=use_gps)
-    ui_voice_search_hint()
-    find_clicked = st.button(t(lang, "find_services"), use_container_width=True)
-else:
-    use_gps = False
-    country = None
-    city    = ""
-    find_clicked = False
-
-# ─────────────────────────────────────────────────────────────────────────────
-# MAIN SEARCH / RESULTS LOGIC
-# ─────────────────────────────────────────────────────────────────────────────
-
-if find_clicked or one_tap or recent_search_trigger:
-
-    user_lat = user_lon = None
-    data_use = location_label = None
-
-    # Resolve location
-    if (one_tap or use_gps or recent_search_trigger) and lat is not None and lon is not None:
-        user_lat, user_lon = lat, lon
-        location_label     = f"{round(lat, 3)}, {round(lon, 3)}"
-        if not recent_search_trigger:
-            st.info(t(lang, "using_gps"))
-        data_use = data.copy()
-        track("search")
+    got_fresh_fix = bool(loc) and loc.get("latitude") is not None
+    if got_fresh_fix:
+        st.session_state.lat          = loc["latitude"]
+        st.session_state.lon          = loc["longitude"]
+        st.session_state.gps_accuracy = loc.get("accuracy")
+        st.session_state.used_ip_fallback = False
         track("gps_ok")
+        st.success("📍 Location confirmed — finding nearest services.")
+    elif loc and loc.get("latitude") is None and st.session_state.gps_attempted:
+        st.warning(
+            "📍 Location blocked. Tap the 🔒 lock icon in your address bar → "
+            "set Location to **Allow** → press 🔄 Retry."
+        )
 
-    elif city != "":
-        city_t    = city.title()
-        city_data = data[(data["City"] == city_t) & (data["Country"] == country)]
-        if city_data.empty:
-            st.error(t(lang, "city_not_found"))
-            st.stop()
-        user_lat, user_lon = city_data.iloc[0]["Latitude"], city_data.iloc[0]["Longitude"]
-        location_label     = f"{city_t}, {country}"
-        st.info(location_label)
-        data_use = data[data["Country"] == country].copy()
-        track("search", city=city_t)
+    lat = st.session_state.lat
+    lon = st.session_state.lon
 
+
+    if one_tap and (lat is None or lon is None):
+        st.error(t(lang, "allow_location"))
+        if st.button("📶 Use Approximate Network Location", key="ip_fallback_btn"):
+            with st.spinner("Estimating location from network…"):
+                ip_lat, ip_lon = get_ip_location()
+            if ip_lat is not None:
+                st.session_state.lat = ip_lat
+                st.session_state.lon = ip_lon
+                st.session_state.used_ip_fallback = True
+                st.rerun()
+            else:
+                st.error("Could not detect approximate location. Check your connection.")
+        st.stop()
+
+    if st.session_state.used_ip_fallback and lat is not None:
+        st.warning("📶 Using city-level network location (GPS unavailable) — not your exact position.")
+
+
+    recent_search_trigger = st.session_state.pop("recent_search_trigger", False)
+
+    if not one_tap:
+        use_gps = st.checkbox(t(lang, "use_gps"))
+        countries = sorted(data["Country"].unique())
+        default_idx = countries.index("India") if "India" in countries else 0
+        country = st.selectbox(t(lang, "country"), countries, index=default_idx)
+        city    = st.text_input(t(lang, "city"), disabled=use_gps)
+        ui_voice_search_hint()
+        find_clicked = st.button(t(lang, "find_services"), use_container_width=True)
     else:
-        st.warning(t(lang, "enter_city_or_gps"))
-        if st.session_state.cached_data_use is not None:
-            if st.button(t(lang, "using_cached"), key="use_cached_btn"):
-                data_use       = st.session_state.cached_data_use
-                location_label = st.session_state.cached_label
+        use_gps = False
+        country = None
+        city    = ""
+        find_clicked = False
+
+
+    if find_clicked or one_tap or recent_search_trigger:
+        user_lat = user_lon = None
+        data_use = location_label = None
+
+
+        if (one_tap or use_gps or recent_search_trigger) and lat is not None and lon is not None:
+            user_lat, user_lon = lat, lon
+            location_label     = f"{round(lat, 3)}, {round(lon, 3)}"
+            if not recent_search_trigger:
+                st.info(t(lang, "using_gps"))
+            data_use = data.copy()
+            track("search")
+            track("gps_ok")
+
+        elif city != "":
+            city_t    = city.title()
+            city_data = data[(data["City"] == city_t) & (data["Country"] == country)]
+            if city_data.empty:
+                st.error(t(lang, "city_not_found"))
+                st.stop()
+            user_lat, user_lon = city_data.iloc[0]["Latitude"], city_data.iloc[0]["Longitude"]
+            location_label     = f"{city_t}, {country}"
+            st.info(location_label)
+            data_use = data[data["Country"] == country].copy()
+            track("search", city=city_t)
+
+        else:
+            st.warning(t(lang, "enter_city_or_gps"))
+            if st.session_state.cached_data_use is not None:
+                if st.button(t(lang, "using_cached"), key="use_cached_btn"):
+                    data_use       = st.session_state.cached_data_use
+                    location_label = st.session_state.cached_label
+                else:
+                    st.stop()
             else:
                 st.stop()
-        else:
+
+
+        if "Distance" not in data_use.columns:
+            data_use["Distance"] = data_use.apply(
+                lambda row: distance(user_lat, user_lon, row["Latitude"], row["Longitude"]), axis=1
+            )
+            data_use = data_use.sort_values("Distance")
+
+
+        st.session_state.cached_data_use = data_use
+        st.session_state.cached_label    = location_label
+        add_recent_location(st.session_state, location_label, user_lat, user_lon)
+
+
+        h_found  = len(data_use[data_use["Category"] == "Hospital"])
+        a_found  = len(data_use[data_use["Category"] == "Ambulance"])
+        p_found  = len(data_use[data_use["Category"] == "Police"])
+
+        ui_dashboard(gps_active=lat is not None, hospitals=h_found, ambulances=a_found, police=p_found)
+        log_event("search", user_lat, user_lon, lang)
+
+
+        if one_tap:
+            ui_location_card(user_lat, user_lon, st.session_state.get("gps_accuracy"))
+            ui_emergency_banner()
+            log_event("emergency_results_shown", user_lat, user_lon, lang)
+
+            priority = [
+                ("Hospital", "🏥", t(lang, "nearest_hospital")),
+                ("Ambulance","🚑", t(lang, "nearest_ambulance")),
+                ("Police",   "🚓", t(lang, "nearest_police")),
+                ("Fire",     "🚒", t(lang, "nearest_fire")),
+            ]
+
+            map_points = []
+            for service, icon, label in priority:
+                ui_section_header(icon, label)
+                results = get_results(service, data_use, user_lat, user_lon, n=1)
+                if results:
+                    render_result(results[0], label, f"em_{service}", service, highlight=True)
+                    map_points.append((service, results[0]))
+                    track(event="search", category=service)
+                else:
+                    ui_no_data(service)
+
+            st.divider()
+            ui_map(user_lat, user_lon, map_points)
+
+            st.markdown("""
+            <div style="background:rgba(220,38,38,.08);border:1px solid rgba(220,38,38,.3);
+                        border-radius:var(--radius);padding:.7rem 1rem;margin-top:.8rem;
+                        font-size:.8rem;color:#b91c1c;text-align:center;font-weight:600;">
+              ⚠️ Always call official emergency numbers in a life-threatening situation.
+              This app is a directory — response times may vary.
+            </div>
+            """, unsafe_allow_html=True)
+            ui_footer()
             st.stop()
 
-    # Compute distances
-    if "Distance" not in data_use.columns:
-        data_use["Distance"] = data_use.apply(
-            lambda row: distance(user_lat, user_lon, row["Latitude"], row["Longitude"]), axis=1
-        )
-        data_use = data_use.sort_values("Distance")
 
-    # Cache
-    st.session_state.cached_data_use = data_use
-    st.session_state.cached_label    = location_label
-    add_recent_location(st.session_state, location_label, user_lat, user_lon)
+        ui_section_header("📍", t(lang, "nearby_services"), "Top results per category · closest first")
+        log_event("manual_search", user_lat, user_lon, lang)
 
-    # Stats for dashboard
-    h_found  = len(data_use[data_use["Category"] == "Hospital"])
-    a_found  = len(data_use[data_use["Category"] == "Ambulance"])
-    p_found  = len(data_use[data_use["Category"] == "Police"])
-
-    ui_dashboard(gps_active=lat is not None, hospitals=h_found, ambulances=a_found, police=p_found)
-    log_event("search", user_lat, user_lon, lang)
-
-    # ── ONE TAP EMERGENCY FLOW ────────────────────────────────────────────────
-    if one_tap:
-        ui_location_card(user_lat, user_lon, st.session_state.get("gps_accuracy"))
-        ui_emergency_banner()
-        log_event("emergency_results_shown", user_lat, user_lon, lang)
-
-        priority = [
-            ("Hospital", "🏥", t(lang, "nearest_hospital")),
-            ("Ambulance","🚑", t(lang, "nearest_ambulance")),
-            ("Police",   "🚓", t(lang, "nearest_police")),
-            ("Fire",     "🚒", t(lang, "nearest_fire")),
+        services_order = [
+            ("Hospital",      "🏥"),
+            ("Ambulance",     "🚑"),
+            ("Police",        "🚓"),
+            ("Fire",          "🚒"),
+            ("Towing",        "🚛"),
+            ("Puncture Shop", "🛞"),
+            ("Showroom",      "🏪"),
         ]
 
         map_points = []
-        for service, icon, label in priority:
-            ui_section_header(icon, label)
-            results = get_results(service, data_use, user_lat, user_lon, n=1)
-            if results:
-                render_result(results[0], label, f"em_{service}", service, highlight=True)
-                map_points.append((service, results[0]))
-                track(event="search", category=service)
+        for s, icon in services_order:
+            ui_section_header(icon, service_label(lang, s))
+            results = get_results(s, data_use, user_lat, user_lon, n=5)
+            if not results:
+                ui_no_data(s)
             else:
-                ui_no_data(service)
+                for i, result in enumerate(results):
+                    render_result(result, service_label(lang, s), f"{s}_{i}", s, highlight=(i == 0))
+                    if i == 0:
+                        map_points.append((s, result))
+                        track(event="search", category=s)
 
         st.divider()
         ui_map(user_lat, user_lon, map_points)
-
-        st.markdown("""
-        <div style="background:rgba(220,38,38,.08);border:1px solid rgba(220,38,38,.3);
-                    border-radius:var(--radius);padding:.7rem 1rem;margin-top:.8rem;
-                    font-size:.8rem;color:#b91c1c;text-align:center;font-weight:600;">
-          ⚠️ Always call official emergency numbers in a life-threatening situation.
-          This app is a directory — response times may vary.
-        </div>
-        """, unsafe_allow_html=True)
+        st.info(t(lang, "tip_ambulance"))
         ui_footer()
-        st.stop()
 
-    # ── NORMAL SEARCH FLOW ────────────────────────────────────────────────────
-    ui_section_header("📍", t(lang, "nearby_services"), "Top results per category · closest first")
-    log_event("manual_search", user_lat, user_lon, lang)
-
-    services_order = [
-        ("Hospital",      "🏥"),
-        ("Ambulance",     "🚑"),
-        ("Police",        "🚓"),
-        ("Fire",          "🚒"),
-        ("Towing",        "🚛"),
-        ("Puncture Shop", "🛞"),
-        ("Showroom",      "🏪"),
+def find_nearest_hospital(lat, lon):
+    """
+    Look up the nearest real Hospital from data.csv for the AI Triage tab's
+    incident report. Returns {"name", "distance_km"} or None if no hospital
+    rows exist — kept separate from the LLM so the report never shows a
+    hospital name the AI invented.
+    """
+    hospitals = data[data["Category"] == "Hospital"]
+    if hospitals.empty:
+        return None
+    nearest = hospitals.loc[
+        hospitals.apply(
+            lambda row: distance(lat, lon, row["Latitude"], row["Longitude"]), axis=1
+        ).idxmin()
     ]
+    return {
+        "name": nearest["Name"],
+        "distance_km": distance(lat, lon, nearest["Latitude"], nearest["Longitude"]),
+    }
 
-    map_points = []
-    for s, icon in services_order:
-        ui_section_header(icon, service_label(lang, s))
-        results = get_results(s, data_use, user_lat, user_lon, n=5)
-        if not results:
-            ui_no_data(s)
-        else:
-            for i, result in enumerate(results):
-                render_result(result, service_label(lang, s), f"{s}_{i}", s, highlight=(i == 0))
-                if i == 0:
-                    map_points.append((s, result))
-                    track(event="search", category=s)
 
-    st.divider()
-    ui_map(user_lat, user_lon, map_points)
-    st.info(t(lang, "tip_ambulance"))
+AI_UNIT_TO_CATEGORY = {
+    "Ambulance":              "Ambulance",
+    "Police":                 "Police",
+    "Fire Rescue":            "Fire",
+    "Tow Truck":              "Towing",
+    "Highway Patrol":         "Police",
+    "Hazmat":                 "Fire",
+    "Disaster Response":      "Fire",
+    "Electricity Department": "Police",
+}
 
-ui_footer()
+def find_services_for_units(lat, lon, units, n_each=1):
+    """
+    For each AI-recommended unit, look up the nearest REAL service(s) from
+    data.csv. Returns {unit_name: [ {name, phone, distance_km, lat, lon}, ... ]}.
+    Never invents data — only returns rows that actually exist.
+    """
+    if lat is None or lon is None:
+        return {}
+
+    work = data.copy()
+    work["Distance"] = work.apply(
+        lambda r: distance(lat, lon, r["Latitude"], r["Longitude"]), axis=1
+    )
+
+    out = {}
+    for unit in units:
+        category = AI_UNIT_TO_CATEGORY.get(unit)
+        if not category:
+            out[unit] = []
+            continue
+        subset = work[work["Category"] == category].sort_values("Distance").head(n_each)
+        rows = []
+        for _, row in subset.iterrows():
+            phone = str(row["Phone"]).replace(".0", "")
+            rows.append({
+                "name": row["Name"],
+                "phone": phone,
+                "distance_km": row["Distance"],
+                "lat": row["Latitude"],
+                "lon": row["Longitude"],
+            })
+        out[unit] = rows
+    return out
+
+with tab_ai:
+    if AI_AVAILABLE:
+        render_ai_chat_tab(
+            user_lat=st.session_state.lat,
+            user_lon=st.session_state.lon,
+            hospital_lookup_fn=find_nearest_hospital,
+        )
+    else:
+        st.error("ai_chat.py not found — place it in the same folder as app.py.")
+

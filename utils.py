@@ -15,9 +15,6 @@ ANALYTICS_FILE = "analytics_log.csv"
 RECENT_LOCATIONS_LIMIT = 5
 
 
-# ---------------------------------------------------------------------------
-# IP-based location fallback (used only when browser GPS is unavailable)
-# ---------------------------------------------------------------------------
 def get_ip_location():
     """
     Best-effort approximate location using the requester's IP address.
@@ -37,9 +34,6 @@ def get_ip_location():
     return None, None
 
 
-# ---------------------------------------------------------------------------
-# Usage analytics (simple local CSV log — no external service needed)
-# ---------------------------------------------------------------------------
 def log_event(event_type: str, lat=None, lon=None, language="en", extra=""):
     """
     Append a row to analytics_log.csv. Fails silently — analytics should
@@ -67,15 +61,11 @@ def log_event(event_type: str, lat=None, lon=None, language="en", extra=""):
         pass
 
 
-# ---------------------------------------------------------------------------
-# Share links (WhatsApp / SMS) — no API key needed, just deep links
-# ---------------------------------------------------------------------------
 def whatsapp_share_link(message: str) -> str:
     return f"https://wa.me/?text={quote(message)}"
 
 
 def sms_share_link(message: str) -> str:
-    # sms: URI works on most mobile browsers; body param support varies by OS
     return f"sms:?body={quote(message)}"
 
 
@@ -89,10 +79,6 @@ def build_emergency_share_message(name, distance_km, phone, lat, lon, label):
     )
 
 
-# ---------------------------------------------------------------------------
-# Recent locations (kept in session, not written to shared disk —
-# avoids leaking one user's location history to another user)
-# ---------------------------------------------------------------------------
 def add_recent_location(session_state, label, lat, lon):
     if "recent_locations" not in session_state:
         session_state.recent_locations = []
@@ -109,10 +95,6 @@ def add_recent_location(session_state, label, lat, lon):
     ]
 
 
-# ---------------------------------------------------------------------------
-# Pending submissions queue (public sign-in users suggest entries here;
-# they only reach the live data.csv once an admin approves them)
-# ---------------------------------------------------------------------------
 PENDING_COLUMNS = [
     "Name", "Type", "Phone", "City", "Country", "Latitude", "Longitude",
     "SubmittedBy", "SubmittedAt", "Status",

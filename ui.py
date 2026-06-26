@@ -1,6 +1,6 @@
 import streamlit as st
 
-# THEME INJECTION — call once at the top of app.py
+
 def inject_theme(dark_mode=True):
     if dark_mode:
         theme_vars = """
@@ -167,33 +167,88 @@ def inject_theme(dark_mode=True):
         unsafe_allow_html=True,
     )
 
-# 2. HERO SECTION
 
 def render_hero(gps_active=False, total_contacts=None, total_countries=None, total_service_types=None):
+    n_services  = total_contacts  or 0
+    n_countries = total_countries or 0
 
-    status_color = "#22c55e" if gps_active else "#94a3b8"
-    status_text  = "● Location Ready" if gps_active else "● Tap to Activate GPS"
+    if gps_active:
+        gps_dot   = '#22c55e'
+        gps_blink = 'animation:blink-badge 1.4s infinite;'
+        gps_label = '🟢 GPS Connected'
+    else:
+        gps_dot   = '#64748b'
+        gps_blink = ''
+        gps_label = '🔴 GPS Not Connected'
+
+    stats = [
+        ("🏥", f"{n_services:,}" if n_services else "—", "Services"),
+        ("🌍", str(n_countries) if n_countries else "—",  "Countries"),
+        ("⚡", "&lt;2s",                                    "GPS Lock"),
+        ("🚑", "24/7",                                      "Emergency"),
+    ]
+    stat_cards = "".join(
+        f'<div style="flex:1;min-width:0;background:rgba(255,255,255,.04);'
+        f'border:1px solid rgba(255,255,255,.08);border-radius:12px;'
+        f'padding:.55rem .35rem;text-align:center;">'
+        f'<div style="font-size:1.1rem;line-height:1;">{icon}</div>'
+        f'<div style="font-size:1rem;font-weight:900;color:#f1f5f9;'
+        f'letter-spacing:-.01em;line-height:1.15;margin:.15rem 0 .1rem;">{val}</div>'
+        f'<div style="font-size:.6rem;color:#64748b;font-weight:600;'
+        f'text-transform:uppercase;letter-spacing:.05em;">{lbl}</div>'
+        f'</div>'
+        for icon, val, lbl in stats
+    )
 
     hero_html = (
-        '<div style="background: linear-gradient(135deg,#1e293b,#0f172a);'
-        'border:1px solid rgba(220,38,38,.25);border-radius:20px;padding:2rem;'
-        'text-align:center;margin-bottom:1rem;">'
-        '<div style="width:64px;height:64px;margin:auto;'
-        'background:linear-gradient(135deg,#dc2626,#f97316);border-radius:18px;'
-        'display:flex;align-items:center;justify-content:center;font-size:2rem;">'
-        '🚨</div>'
-        '<h1 style="color:white;font-size:2.1rem;margin-top:12px;margin-bottom:8px;">'
-        'NexusSOS</h1>'
-        '<p style="color:#94a3b8;margin-bottom:14px;">'
-        'AI-Powered Emergency Response Platform</p>'
-        f'<span style="color:{status_color};font-weight:700;">'
-        f'● {status_text}</span>'
+        '<div style="background:linear-gradient(160deg,#1a2d4a 0%,#0d1829 55%,#0f172a 100%);'
+        'border:1px solid rgba(220,38,38,.3);border-radius:20px;'
+        'padding:1.1rem 1.25rem .95rem;margin-bottom:.75rem;'
+        'box-shadow:0 4px 32px rgba(0,0,0,.45),0 0 0 1px rgba(220,38,38,.08);">'
+
+
+        '<div style="display:flex;align-items:center;gap:.85rem;margin-bottom:.8rem;">'
+        '<div style="width:46px;height:46px;min-width:46px;'
+        'background:linear-gradient(135deg,#dc2626,#f97316);'
+        'border-radius:14px;display:flex;align-items:center;'
+        'justify-content:center;font-size:1.5rem;'
+        'box-shadow:0 6px 18px rgba(220,38,38,.4);">🚨</div>'
+        '<div style="flex:1;min-width:0;">'
+        '<div style="font-size:1.45rem;font-weight:900;color:#ffffff;'
+        'letter-spacing:-.025em;line-height:1.1;">NexusSOS</div>'
+        '<div style="font-size:.72rem;color:#94a3b8;font-weight:500;'
+        'margin-top:.1rem;letter-spacing:.01em;">Respond Faster. Save Lives.</div>'
+        '</div>'
+        f'<div style="display:flex;align-items:center;gap:5px;'
+        f'background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);'
+        f'border-radius:99px;padding:.28rem .75rem;white-space:nowrap;">'
+        f'<span style="width:7px;height:7px;border-radius:50%;'
+        f'background:{gps_dot};display:inline-block;{gps_blink}"></span>'
+        f'<span style="font-size:.7rem;font-weight:700;color:{gps_dot};">{gps_label}</span>'
+        f'</div>'
+        '</div>'
+
+
+        '<div style="height:1px;background:rgba(255,255,255,.07);margin-bottom:.7rem;"></div>'
+
+
+        f'<div style="display:flex;gap:.45rem;">{stat_cards}</div>'
+
+
+        '<div style="margin-top:.7rem;display:flex;align-items:center;gap:.5rem;flex-wrap:wrap;">'
+        '<span style="font-size:.65rem;color:#475569;font-weight:600;'
+        'text-transform:uppercase;letter-spacing:.06em;">'
+        '🛡️ IIT Madras CoERS · MoRTH · Road Safety Hackathon 2026'
+        '</span>'
+        '<span style="margin-left:auto;font-size:.65rem;font-weight:700;color:#22c55e;'
+        'background:rgba(34,197,94,.1);border:1px solid rgba(34,197,94,.25);'
+        'padding:.15rem .55rem;border-radius:99px;">● LIVE</span>'
+        '</div>'
         '</div>'
     )
 
     st.markdown(hero_html, unsafe_allow_html=True)
 
-# DASHBOARD STATS BAR
 
 def render_dashboard(gps_active, hospitals, ambulances, police, countries=None):
     items = [
@@ -224,7 +279,6 @@ def render_dashboard(gps_active, hospitals, ambulances, police, countries=None):
         unsafe_allow_html=True,
     )
 
-# 4. EMERGENCY ACTIVE BANNER
 
 def render_emergency_banner():
     banner_html = (
@@ -242,7 +296,6 @@ def render_emergency_banner():
     )
     st.markdown(banner_html, unsafe_allow_html=True)
 
-# SECTION HEADER
 
 def render_section_header(icon, title, subtitle=None):
     sub_html = (
@@ -261,7 +314,6 @@ def render_section_header(icon, title, subtitle=None):
     )
     st.markdown(header_html, unsafe_allow_html=True)
 
-# SERVICE CARD (best result — highlighted)
 
 def render_service_card_header(name, distance_km, phone, badge, accent_color="#dc2626"):
     phone_html = (
@@ -290,8 +342,6 @@ def render_service_card_header(name, distance_km, phone, badge, accent_color="#d
     st.markdown(card_html, unsafe_allow_html=True)
 
 
-# SECONDARY RESULT ROW (smaller, no call/nav buttons)
-
 def render_secondary_row(name, distance_km, phone, badge):
     phone_text = f" · 📞 {phone}" if phone else ""
     row_html = (
@@ -306,7 +356,6 @@ def render_secondary_row(name, distance_km, phone, badge):
     )
     st.markdown(row_html, unsafe_allow_html=True)
 
-# MAP CONTAINER WRAPPER
 
 def render_map_header():
     header_html = (
@@ -345,7 +394,6 @@ def render_map_header():
         unsafe_allow_html=True,
     )
 
-# LOCATION CARD (shown after GPS detect)
 
 def render_location_card(lat, lon, accuracy=None):
     card_html = (
@@ -372,7 +420,6 @@ def render_location_card(lat, lon, accuracy=None):
     )
     st.markdown(card_html, unsafe_allow_html=True)
 
-# "NO DATA" empty state
 
 def render_no_data(service_type):
     st.markdown(
