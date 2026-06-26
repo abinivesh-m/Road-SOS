@@ -727,7 +727,7 @@ def render_dispatch_card(dispatch: dict):
             st.code(sms, language=None)
         with col_copy:
             st.markdown("<div style='margin-top:.35rem;'></div>", unsafe_allow_html=True)
-            if st.button("📋 Copy", key=f"copy_sms_{hash(sms)}", use_container_width=True,
+            if st.button("📋 Copy", key=f"copy_sms_{id(dispatch)}", use_container_width=True,
                          help="Copy SMS to clipboard"):
                 st.write(
                     f"<script>navigator.clipboard.writeText({json.dumps(sms)})</script>",
