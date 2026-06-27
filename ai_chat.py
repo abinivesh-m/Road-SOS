@@ -815,7 +815,7 @@ def render_ai_chat_tab(user_lat=None, user_lon=None,
         'font-size:1.1rem;">🤖</div>'
         '<div>'
         '<div style="font-size:1rem;font-weight:800;color:#f1f5f9;">NexusSOS AI Assistant Engine</div>'
-        '<div style="font-size:.73rem;color:#64748b;">IIT Madras CoERS · MoRTH · google gemini</div>'
+        '<div style="font-size:.73rem;color:#64748b;">IIT Madras CoERS · MoRTH</div>'
         '</div></div>'
         '<div style="font-size:.78rem;color:#94a3b8;line-height:1.5;">'
         '<strong style="color:#cbd5e1;">Describe the emergency.</strong> NexusSOS AI classifies severity, '
