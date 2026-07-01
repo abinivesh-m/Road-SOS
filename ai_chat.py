@@ -7,6 +7,7 @@ developed for IIT Madras CoERS / MoRTH Road Safety Hackathon.
 import json
 import re
 import time as _time
+import requests
 import google.generativeai as genai
 import streamlit as st
 
@@ -337,7 +338,35 @@ def _is_transient_error(exc: Exception) -> bool:
     return any(hint in msg for hint in _TRANSIENT_MESSAGE_HINTS)
 
 
+class NoInternetError(Exception):
+    """Raised when there is no working internet connection."""
+    pass
+
+
+def has_internet(timeout: float = 2.5) -> bool:
+    """Fast connectivity probe. Tries a couple of reliable, lightweight
+    endpoints so a single flaky host doesn't cause a false negative."""
+    probe_urls = (
+        "https://www.google.com/generate_204",
+        "https://www.gstatic.com/generate_204",
+    )
+    for url in probe_urls:
+        try:
+            resp = requests.get(url, timeout=timeout)
+            if resp.status_code < 500:
+                return True
+        except requests.RequestException:
+            continue
+    return False
+
+
 def call_roadsos_ai(messages, api_key, max_retries=3, on_retry=None):
+    # Fail fast if there's no internet at all instead of letting the
+    # Gemini client hang or raise an error message the retry logic
+    # doesn't recognize as transient.
+    if not has_internet():
+        raise NoInternetError("No internet connection detected.")
+
     genai.configure(api_key=api_key)
     model = genai.GenerativeModel("gemini-2.5-flash")
 
@@ -349,7 +378,11 @@ def call_roadsos_ai(messages, api_key, max_retries=3, on_retry=None):
     total_attempts = max_retries + 1
     for attempt in range(1, total_attempts + 1):
         try:
-            response = model.generate_content(prompt)
+            # Give the request a short hard timeout so a dead/unstable
+            # connection fails quickly instead of hanging the UI.
+            response = model.generate_content(
+                prompt, request_options={"timeout": 10}
+            )
             return response.text
         except Exception as e:
             last_exc = e
@@ -975,6 +1008,23 @@ def render_ai_chat_tab(user_lat=None, user_lon=None,
                     "using rule-based estimate.\n\n"
                     f"Classified as **{dispatch['incident']}** · Severity **{dispatch['severity']}**"
                 )
+
+        except NoInternetError:
+            ai_failed = True
+            dispatch = offline_classify(raw_user_text)
+            dispatch["nearest_hospital"] = nearest_hospital
+            timeline.append(("AI Classified (Offline Fallback)", _time.time()))
+            timeline.append(("Dispatch Generated", _time.time()))
+            conv_text = (
+                f"📡 **Offline Emergency Rule Engine** — no internet connection, "
+                f"using on-device rule-based classification.\n\n"
+                f"Classified as **{dispatch['incident']}** · Severity **{dispatch['severity']}**\n\n"
+                f"📍 Location: location not provided"
+            )
+            st.session_state.ai_history.append({
+                "role": "assistant",
+                "content": "[offline fallback — no internet connection]",
+            })
 
         except Exception:
             ai_failed = True
